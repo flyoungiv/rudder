@@ -1,0 +1,54 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+header {
+  padding: 20px 0;
+}
+
+header .row,
+footer .row {
+  display: flex;
+  align-items: center;
+}
+
+header h1 {
+  font-weight: 700;
+  margin: 0;
+}
+
+header nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+header p {
+  padding: 0 20px;
+  margin: 0;
+}
+
+header a {
+  color: #212529;
+}
+
+.jumbotron {
+  display: flex;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  height: 40px;
+  background-color: MidnightBlue !important;
+}
+
+.jumbotron h2 {
+  margin: 0;
+}
+
+.jumbotron h3 {
+  margin: 0 0 20px;
+}
+
+section .row img {
+  margin: 0 0 30px;
+  width: 100%;
+}

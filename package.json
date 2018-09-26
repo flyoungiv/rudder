@@ -1,0 +1,14 @@
+{
+  "name": "rudder",
+  "version": "1.0.0",
+  "description": "an intuitive way to use your computer from your couch with a controller",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"test 123\""
+  },
+  "author": "Indiana Jones",
+  "license": "ISC",
+  "devDependencies": {
+    "pretty": "^2.0.0"
+  }
+}
