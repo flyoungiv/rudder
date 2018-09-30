@@ -13,22 +13,25 @@ for (let i = 0; i < gameList.length; i++) {
 	if (i % numColumns === 0) html+= `<div class="row justify-content-center">`;
 	
 	//html for each figure
-	/*html += `
+	html += `
   <figure name="${gameList[i][0]}" class="col-sm-${12/numColumns}">
     <p>${gameList[i][0]}</p>
     <img src="../img/cover_art/${gameList[i][0]}/${gameList[i][1]}"/>
   </figure>`;
-  */
-	//uncomment below block to replace all images with default test image
+  
+	//below commented section for testing//
+	/*
+	uncomment below block to replace all images with default test image
   	html += `
   <figure name="${gameList[i][0]}" class="col-sm-${12/numColumns}">
     <p>${gameList[i][0]}</p>
     <img src="../img/default/default.png"/>
   </figure>`;
-  
+ */ 
 	//final closing div tag
 	if (i === gameList.length - 1) html += `</div>`;
 }
 
-//console.log(html);
+
+console.log(html);
 document.getElementById("game-list").innerHTML = html;
