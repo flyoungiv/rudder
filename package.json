@@ -8,7 +8,8 @@
   },
   "author": "Indiana Jones",
   "license": "ISC",
-  "devDependencies": {
-    "pretty": "^2.0.0"
+  "devDependencies": {},
+  "dependencies": {
+    "xmlhttprequest": "^1.8.0"
   }
 }

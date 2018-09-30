@@ -6,3 +6,4 @@ To-Do Items for Rudder Project
 	*  give game cover art a default/blank cover
 	*  set up on-click
 	*  set up right-click menu
+	*  find new approach for insecure call in src/api_call.js
