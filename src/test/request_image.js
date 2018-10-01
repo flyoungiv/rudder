@@ -16,6 +16,6 @@ request('https://cdn.thegamesdb.net/images/small/boxart/front/36615-1.jpg').pipe
   });
 };
 
-download('https://cdn.thegamesdb.net/images/small/boxart/front/36615-1.jpg', 'mom.png', function(){
+download('https://cdn.thegamesdb.net/images/small/boxart/front/36615-1.jpg', 'bf1.jpg', function(){
   console.log('done');
 }); */

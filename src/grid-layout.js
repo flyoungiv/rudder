@@ -14,7 +14,7 @@ for (let i = 0; i < gameList.length; i++) {
 	
 	//html for each figure
 	html += `
-  <figure name="${gameList[i][0]}" class="col-sm-${12/numColumns}">
+  <figure name="${gameList[i][0]}" id="game-${i}" class="col-sm-${12/numColumns}">
     <p>${gameList[i][0]}</p>
     <img src="../img/cover_art/${gameList[i][0]}/${gameList[i][1]}"/>
   </figure>`;
