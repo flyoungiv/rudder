@@ -1,0 +1,42 @@
+{
+	"games": [
+		{
+			"id": 60530,
+			"game_title": "Battlefield 1",
+			"shortcut": "../src/test/launch_game.cmd",
+			"cover_art": "Battlefield 1-285x380.jpg"
+		},
+		{
+			"id": 1,
+			"game_title": "Counter-Strike Global Offensive",
+			"shortcut": "../src/test/launch_game.cmd",
+			"cover_art": "Counter-Strike_ Global Offensive-285x380.jpg"
+		},
+		{
+			"id": 1,
+			"game_title": "Dota 2",
+			"shortcut": "../src/test/launch_game.cmd",
+			"cover_art": "Dota 2-285x380.jpg"
+		},
+		{
+			"id": 1,
+			"game_title": "Fortnite",
+			"shortcut": "../src/test/launch_game.cmd",
+			"cover_art": "Fortnite-285x380.jpg"
+		},
+
+		{
+			"id": 1,
+			"game_title": "Grand Theft Auto V",
+			"shortcut": "../src/test/launch_game.cmd",
+			"cover_art": "Grand Theft Auto V-285x380.jpg"
+		},
+
+		{
+			"id": 1,
+			"game_title": "Hearthstone",
+			"shortcut": "../src/test/launch_game.cmd",
+			"cover_art": "Hearthstone-285x380.jpg"
+		}
+	]
+}
