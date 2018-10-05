@@ -9,8 +9,19 @@
 </head>
 <body>
     <div class="row header">
-        <div class="col-sm-1">
+        <div class="col-sm-2">
 			<img src="../../img/win_icon.png"/>
+			<img src="../../img/settings_icon_128.png"/>
+		</div>
+		<div id="clock" class="col-sm-1">
+		<script>
+			//setInterval(function() {
+				var d = new Date(Date.now());
+				var time = `${d.getHours()}:${d.getMinutes()}:${d.getSeconds()}`;
+				document.getElementById("clock").innerHTML = time;
+			//},
+			//1000);
+		</script>
 		</div>
     </div>
   <section class="container" id="game-list"></section>
