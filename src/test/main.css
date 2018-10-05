@@ -1,0 +1,14 @@
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.row.header {
+  margin: 3rem;
+  padding-bottom: 2rem;
+  max-height: 6rem;
+  border-bottom: solid 1px black;
+}
+
+.row.header img {
+  max-height: 100%;
+}
