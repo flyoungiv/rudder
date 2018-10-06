@@ -2,92 +2,24 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
-header {
-  padding: 20px 0;
+.row.header {
+  margin: 3rem;
+  padding-bottom: 2rem;
+  max-height: 5rem;
+  border-bottom: solid 1px black;
 }
 
-header .row,
-footer .row {
-  display: flex;
-  align-items: center;
+.row.header img {
+  max-height: 100%;
+  margin: 0 .5rem;
 }
 
-header h1 {
-  font-weight: 700;
-  margin: 0;
-}
-
-header nav {
-  display: flex;
-  justify-content: flex-end;
-}
-
-header p {
-  padding: 0 20px;
-  margin: 0;
-}
-
-header a {
-  color: #212529;
-}
-
-.jumbotron {
-  display: flex;
-  align-items: center;
-  background-size: cover;
-  background-position: center;
-  height: 40px;
-  background-color: MidnightBlue !important;
-}
-
-.jumbotron h2 {
-  margin: 0;
-}
-
-.jumbotron h3 {
-  margin: 0 0 20px;
+#clock {
+  font-size: 1.5rem;
+  margin-left: -1rem;
 }
 
 section .row img {
   margin: 0 0 30px;
   width: 100%;
-}
-
-/*POP-UP MENU FOR SELECTING COVER ART*/
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
-
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
 }
