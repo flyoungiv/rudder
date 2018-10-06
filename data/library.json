@@ -32,9 +32,27 @@
 		},
 		{
 			"id": 1,
-			"game_title": "",
-			"shortcut": "",
-			"cover_art": ""
+			"game_title": "Ori and the Blind Forest",
+			"shortcut": "D:\\Games\\Steam\\steamapps\\common\\Ori\\ori.exe",
+			"cover_art": "ori.jpg"
+		},
+		{
+			"id": 1,
+			"game_title": "The Force Unleashed",
+			"shortcut": "D:\\Games\\Steam\\steamapps\\common\\Star Wars The Force Unleashed\\SWTFU Launcher.exe",
+			"cover_art": "2761846-tfu_cover_art.jpg"
+		},
+		{
+			"id": 1,
+			"game_title": "Half-Life 2",
+			"shortcut": "D:\\Games\\Steam\\steamapps\\common\\Half-Life 2\\hl2.exe",
+			"cover_art": "625502-hl2box.jpg"
+		},
+		{
+			"id": 1,
+			"game_title": "x",
+			"shortcut": "x",
+			"cover_art": "x"
 		}
 	]
 }
