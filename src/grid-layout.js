@@ -1,9 +1,9 @@
-//let gameList = require('./gameList.json');
-let gameList = [["Battlefield 1","Battlefield 1-285x380.jpg"],["Counter-Strike Global Offensive","Counter-Strike_ Global Offensive-285x380.jpg"],["Dota 2","Dota 2-285x380.jpg"],["Fortnite","Fortnite-285x380.jpg"],["Grand Theft Auto V","Grand Theft Auto V-285x380.jpg"],["Hearthstone","Hearthstone-285x380.jpg"],["IRL","IRL-285x380.jpg"],["League of Legends","League of Legends-285x380.jpg"],["Overwatch","Overwatch-285x380.jpg"],["Path of Exile","Path of Exile-285x380.jpg"],["Player Unknown\'s Battlegrounds","PLAYERUNKNOWN\'S BATTLEGROUNDS.jpg"],["Talk Shows","Talk Shows-285x380.jpg"],["The Witcher 3 Wild Hunt","The Witcher 3_ Wild Hunt-285x380.jpg"],["Tom Clancy\'s Rainbow Six Siege","Tom Clancy\'s Rainbow Six_ Siege-285x380.jpg"],["World of Warcraft","World of Warcraft-285x380.jpg"]];
-//console.log(gameList);
+//let library = require('../data/library.json');
+let library = {"games":[{"id":60530,"game_title":"Overwatch","shortcut":"C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe","cover_art":"Overwatch-285x380.jpg"},{"id":1,"game_title":"Star Wars Battlefront II","shortcut":"D:\\Games\\Origin\\STAR WARS Battlefront II\\starwarsbattlefrontii.exe","cover_art":"2932265-sw_2017-apr-15.jpg"},{"id":1,"game_title":"Rocket League","shortcut":"D:\\Games\\Steam\\steamapps\\common\\rocketleague\\Binaries\\Win32\\RocketLeague.exe","cover_art":"2949245-box_rleague.png"},{"id":1,"game_title":"Portal","shortcut":"D:\\Games\\Steam\\steamapps\\common\\Portal\\hl2.exe","cover_art":"2525229-box_portal.png"},{"id":1,"game_title":"The Witcher 3 Wild Hunt","shortcut":"../src/test/launch_game.cmd","cover_art":"The Witcher 3_ Wild Hunt-285x380.jpg"},{"id":1,"game_title":"","shortcut":"","cover_art":""}]};
+let gameList = library.games;
 
 let html = '';
-let numColumns = 4;
+const numColumns = 4;
 
 for (let i = 0; i < gameList.length; i++) {
 	//closing div row tags
@@ -14,21 +14,23 @@ for (let i = 0; i < gameList.length; i++) {
 	
 	//html for each figure
 	html += `
-  <figure name="${gameList[i][0]}" id="game-${i}" class="col-sm-${12/numColumns}">
-    <p>${gameList[i][0]}</p>
-    <img src="../img/cover_art/${gameList[i][0]}/${gameList[i][1]}"/>
+  <figure name="${gameList[i].game_title}" id="game-${i}" class="col-sm-${12/numColumns}">
+    <p>${gameList[i].game_title}</p>
+    <img src="../img/cover_art/${gameList[i].game_title}/${gameList[i].cover_art}"/>
   </figure>`;
   
 	//below commented section for testing//
-	/*
+/*
 	uncomment below block to replace all images with default test image
   	html += `
   <figure name="${gameList[i][0]}" class="col-sm-${12/numColumns}">
     <p>${gameList[i][0]}</p>
     <img src="../img/default/default.png"/>
   </figure>`;
- */ 
-	//final closing div tag
+*/
+
+    //final closing div tag
+
 	if (i === gameList.length - 1) html += `</div>`;
 }
 
