@@ -89,7 +89,8 @@ for (let i = 0; i < gameList.length; i++) {
 	figureElement.appendChild(imgElement);
 
 	//add a listener to the figure  to launch the game when clicked
-	figureElement.addEventListener('click', function() {console.log(`clicked ${game.game_title}`)});
+	//figureElement.addEventListener('click', function() {console.log(`clicked ${game.game_title}`)});
+	figureElement.addEventListener('click', function () {startChildApp(game.shortcut)});
 
 	//finally, add in the whole <figure> game element to the current bootstrap row
 	rowElement.appendChild(figureElement);
