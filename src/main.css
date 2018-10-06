@@ -27,3 +27,7 @@ header h1 {
 p {
   font-size: .75rem;
 }
+
+#game-list {
+  padding-top: 1.5rem;
+}
