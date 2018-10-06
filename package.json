@@ -2,9 +2,10 @@
   "name": "rudder",
   "version": "1.0.0",
   "description": "an intuitive way to use your computer from your couch with a controller",
-  "main": "index.js",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"test 123\""
+    "test": "echo \"test 123\"",
+    "start": "electron ."
   },
   "author": "Indiana Jones",
   "license": "ISC",
@@ -12,6 +13,7 @@
   "dependencies": {
     "fs-jetpack": "^2.1.1",
     "request": "^2.88.0",
-    "xmlhttprequest": "^1.8.0"
+    "xmlhttprequest": "^1.8.0",
+    "electron": "^3.0.0"
   }
 }
