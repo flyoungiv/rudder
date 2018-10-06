@@ -53,38 +53,44 @@ let library = {
 };
 let gameList = library.games;
 
-let html = '';
 const numColumns = 4;
+const colWidth = 12 / numColumns;
+let rowElement;
 
 for (let i = 0; i < gameList.length; i++) {
-	//closing div row tags
-	if (i % numColumns === 0 && i !== 0) html += `</div>`;
-	
-	//opening div row tags
-	if (i % numColumns === 0) html+= `<div class="row justify-content-center">`;
-	
-	//html for each figure
-	html += `
-  <figure name="${gameList[i].game_title}" id="game-${i}" class="col-sm-${12/numColumns}">
-    <p>${gameList[i].game_title}</p>
-    <img src="../img/cover_art/${gameList[i].game_title}/${gameList[i].cover_art}"/>
-  </figure>`;
-  
-	//below commented section for testing//
-/*
-	uncomment below block to replace all images with default test image
-  	html += `
-  <figure name="${gameList[i][0]}" class="col-sm-${12/numColumns}">
-    <p>${gameList[i][0]}</p>
-    <img src="../img/default/default.png"/>
-  </figure>`;
-*/
 
-    //final closing div tag
+	//the next game from the json to add to the DOM
+	let game = gameList[i];
 
-	if (i === gameList.length - 1) html += `</div>`;
+	//start a new row after each 4 games (set by numColumns above)
+	if (i % numColumns === 0) {
+		let currentRow;
+		currentRow = i / numColumns + 1;
+		rowElement = document.createElement('DIV');
+		rowElement.setAttribute('class', 'row justify-content-center');
+		rowElement.setAttribute('id', `row-${currentRow}`);
+		document.getElementById('game-list').appendChild(rowElement);
+	}
+
+	//set up the game as a <figure> element
+	let figureElement = document.createElement('FIGURE');
+	figureElement.setAttribute('id', game.game_title);
+	figureElement.setAttribute('class', `col-sm-${colWidth}`);
+	figureElement.setAttribute('shortcut', game.shortcut);
+
+	//create a <p> to hold the game title and then add it to the <figure>
+	let pElement = document.createElement('P');
+	pElement.appendChild(document.createTextNode(game.game_title));
+	figureElement.appendChild(pElement);
+
+	//create an <image> with a url to the cover art and then add it to the figure
+	let imgElement = document.createElement('IMG');
+	imgElement.setAttribute('src', `../img/cover_art/${game.game_title}/${game.cover_art}`);
+	figureElement.appendChild(imgElement);
+
+	//add a listener to the figure  to launch the game when clicked
+	figureElement.addEventListener('click', function() {console.log(`clicked ${game.game_title}`)});
+
+	//finally, add in the whole <figure> game element to the current bootstrap row
+	rowElement.appendChild(figureElement);
 }
-
-
-console.log(html);
-document.getElementById("game-list").innerHTML = html;
