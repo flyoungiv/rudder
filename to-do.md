@@ -1,8 +1,15 @@
 To-Do Items for Rudder Project
 ==============================
-*  clean up library
-	*  update library.json with games that i own
-	*  get cover art from giant bomb
+*  add ability to add a game to the library from the front-end
+	*  file browser for finding cover art
+	*  file browser for finding executable
+	*  accept input for game name
+	*  update library.json with collected information
+	*  add a nice button to the front-end to trigger these functions
+
+*  ~~clean up library~~
+	*  ~~update library.json with games that i own~~
+	*  ~~get cover art from giant bomb~~
 
 *  right click on a game to get cover art
 	*  ~~organize DOM to have game name as an html attribute~~
