@@ -6,11 +6,23 @@ const {ipcRenderer} = require('electron')
 const selectDirBtn = document.getElementById('browse-for-shortcut')
 
 selectDirBtn.addEventListener('click', (event) => {
-  ipcRenderer.send('open-file-dialog')
+  ipcRenderer.send('choose-path-to-game')
 })
 
-ipcRenderer.on('selected-directory', (event, path) => {
-  document.getElementById('shortcut-path').setAttribute('value',`You selected: ${path}`);
+ipcRenderer.on('selected-game-path', (event, path) => {
+  document.getElementById('shortcut-path').setAttribute('value', path);
   //document.getElementById('shortcut-path').setAttribute('value',`You selected: abc`);
-  console.log(path);
+  console.log(`game selected: ${path}`);
+})
+
+const selectArtBtn = document.getElementById('browse-for-picture')
+
+selectArtBtn.addEventListener('click', (event) => {
+  ipcRenderer.send('choose-path-to-cover-art')
+})
+
+ipcRenderer.on('selected-cover-art-path', (event, path) => {
+  document.getElementById('cover-art-path').setAttribute('value', path);
+  //document.getElementById('shortcut-path').setAttribute('value',`You selected: abc`);
+  console.log(`image selected: ${path}`);
 })

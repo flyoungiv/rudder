@@ -50,12 +50,24 @@ app.on('activate', function () {
 // code. You can also put them in separate files and require them here.
 const applicationMenu = require('./app/ApplicationMenu');
 
-ipcMain.on('open-file-dialog', (event) => {
+ipcMain.on('choose-path-to-game', (event) => {
   dialog.showOpenDialog({
-    properties: ['openFile', 'openDirectory']
+    title: 'Select the path to the exe for your game',
+    properties: ['openFile']
   }, (files) => {
     if (files) {
-      event.sender.send('selected-directory', files)
+      event.sender.send('selected-game-path', files)
+    }
+  })
+})
+
+ipcMain.on('choose-path-to-cover-art', (event) => {
+  dialog.showOpenDialog({
+    title: 'Select the cover image you would like displayed in Rudder',
+    properties: ['openFile']
+  }, (files) => {
+    if (files) {
+      event.sender.send('selected-cover-art-path', files)
     }
   })
 })
