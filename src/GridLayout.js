@@ -56,7 +56,7 @@ for (let i = 0; i < gameList.length; i++) {
 		console.log(`img/cover_art/${game.game_title}/${game.cover_art} does not exist`);
 	} else { //if image exists then include it as the cover art for the game
 		imgElement.setAttribute('src', `../img/cover_art/${game.game_title}/${game.cover_art}`);
-		console.log(`img/cover_art/${game.game_title}/${game.cover_art} not exists`);
+		console.log(`img/cover_art/${game.game_title}/${game.cover_art} exists`);
 	}
 	figureElement.appendChild(imgElement);
 
