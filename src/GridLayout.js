@@ -30,7 +30,7 @@ for (let i = 0; i < gameList.length; i++) {
 		let currentRow;
 		currentRow = i / numColumns + 1;
 		rowElement = document.createElement('DIV');
-		rowElement.setAttribute('class', 'row justify-content-center');
+		rowElement.setAttribute('class', 'row');
 		rowElement.setAttribute('id', `row-${currentRow}`);
 		document.getElementById('game-list').appendChild(rowElement);
 	}
