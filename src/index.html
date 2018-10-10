@@ -13,13 +13,22 @@
   
 </head>
 <body>
+	<br/>
+	<section class="container">
+		<div class="row">
+			<div class="col-sm-9"></div>
+			<!-- Button to trigger new game modal -->
+			<div class="col-sm-3">
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="add-game">
+					+ Add New Game
+			</button>
+			</div>
+	</div>
+	</section>
   <section class="container" id="game-list"></section>
   <script src="GridLayout.js"></script>
   
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="add-game">
-  Modal
-</button>
+
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
