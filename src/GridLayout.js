@@ -1,3 +1,4 @@
+let jetpack;
 let library;
 
 //adding below try/catch block for testing in browser.
@@ -5,6 +6,12 @@ try {
 	library = require('../data/library.json');
 } catch (e) {
 	library = {"games":[{"id":60530,"game_title":"Overwatch","shortcut":"C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe","cover_art":"Overwatch-285x380.jpg"},{"id":1,"game_title":"Star Wars Battlefront II","shortcut":"D:\\Games\\Origin\\STAR WARS Battlefront II\\starwarsbattlefrontii.exe","cover_art":"2932265-sw_2017-apr-15.jpg"},{"id":1,"game_title":"Rocket League","shortcut":"D:\\Games\\Steam\\steamapps\\common\\rocketleague\\Binaries\\Win32\\RocketLeague.exe","cover_art":"2949245-box_rleague.png"},{"id":1,"game_title":"Portal","shortcut":"D:\\Games\\Steam\\steamapps\\common\\Portal\\hl2.exe","cover_art":"2525229-box_portal.png"},{"id":1,"game_title":"The Witcher 3 Wild Hunt","shortcut":"../src/test/launch_game.cmd","cover_art":"The Witcher 3_ Wild Hunt-285x380.jpg"},{"id":1,"game_title":"Ori and the Blind Forest","shortcut":"D:\\Games\\Steam\\steamapps\\common\\Ori\\ori.exe","cover_art":"ori.jpg"},{"id":1,"game_title":"The Force Unleashed","shortcut":"D:\\Games\\Steam\\steamapps\\common\\Star Wars The Force Unleashed\\SWTFU Launcher.exe","cover_art":"2761846-tfu_cover_art.jpg"},{"id":1,"game_title":"Half-Life 2","shortcut":"D:\\Games\\Steam\\steamapps\\common\\Half-Life 2\\hl2.exe","cover_art":"625502-hl2box.jpg"}]};
+}
+
+try {
+	jetpack = require('fs-jetpack');
+} catch (e) {
+	jetpack = null;
 }
 
 let gameList = library.games;
@@ -41,7 +48,16 @@ for (let i = 0; i < gameList.length; i++) {
 
 	//create an <image> with a url to the cover art and then add it to the figure
 	let imgElement = document.createElement('IMG');
-	imgElement.setAttribute('src', `../img/cover_art/${game.game_title}/${game.cover_art}`);
+	if (jetpack === null) { //check whether jetpack is running (doesn't run in browser)
+		console.log('running in browser, not going to use jetpack to check for cover art');
+		imgElement.setAttribute('src', `../img/cover_art/${game.game_title}/${game.cover_art}`);
+	} else if (!jetpack.exists(`img/cover_art/${game.game_title}/${game.cover_art}`)) { //check whether image file exists
+		imgElement.setAttribute('src', '../img/default/default.png'); //set to default image if none exists
+		console.log(`img/cover_art/${game.game_title}/${game.cover_art} does not exist`);
+	} else { //if image exists then include it as the cover art for the game
+		imgElement.setAttribute('src', `../img/cover_art/${game.game_title}/${game.cover_art}`);
+		console.log(`img/cover_art/${game.game_title}/${game.cover_art} not exists`);
+	}
 	figureElement.appendChild(imgElement);
 
 	//add a listener to the figure  to launch the game when clicked

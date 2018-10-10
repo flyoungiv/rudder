@@ -4,7 +4,7 @@ To-Do Items for Rudder Project
 	*  ~~file browser for finding cover art~~
 	*  ~~file browser for finding executable~~
 	*  ~~accept input for game name~~
-	*  update library.json with collected information
+	*  ~~update library.json with collected information~~
 	*  add a nice button to the front-end to trigger these functions
 	*  refactor code
 
@@ -23,4 +23,8 @@ To-Do Items for Rudder Project
 *  other
 	*  set default cover art when image could not be found
 	*  create folder in cover art folder for storing new image
-	*  figure out how to choose relative path correctly in AddNewGame.js
+	*  figure out how to choose relative path correctly in AddNewGame.js and GridLayout.js
+	*  set hover attributes (pointer cursor) for cover arts and path pickers
+	*  add error handling/input validation to add new game function
+	*  move user selected image to cover_art folder
+	*  add ability to delete game

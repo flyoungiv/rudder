@@ -50,21 +50,9 @@
     },
     {
       "id": 1,
-      "game_title": "x",
-      "shortcut": "x",
-      "cover_art": "x"
-    },
-    {
-      "id": 1,
-      "game_title": "BioShock Infinite",
-      "shortcut": "D:\\Games\\Steam\\steamapps\\common\\BioShock Infinite\\Binaries\\Win32\\BioShockInfinite",
-      "newGameCoverArt": "C:\\Users\\Fleetwood\\Documents\\Git\\rudder\\img\\default\\default.png"
-    },
-    {
-      "id": 1,
-      "game_title": "adsfasdfsd",
-      "shortcut": "asdfsafd",
-      "newGameCoverArt": "adsffasd"
+      "game_title": "Bioshock Infinite",
+      "shortcut": "D:\\Games\\Steam\\steamapps\\common\\BioShock Infinite\\Binaries\\Win32\\BioShockInfinite.exe",
+      "cover_art": "2379677-bioshockinfinite_boxart.jpg"
     }
   ]
 }

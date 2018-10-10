@@ -1,4 +1,3 @@
-const jetpack = require('fs-jetpack');
 console.log('addnewgame.js ran');
 
 //let newGameTitle = 'BioShock Infinite';
@@ -6,13 +5,14 @@ console.log('addnewgame.js ran');
 //let newGameCoverArt = 'C:\\Users\\Fleetwood\\Documents\\Git\\rudder\\img\\default\\default.png';
 function addNewGame() {
     console.log('addnewgame() function ran');
-    const library = require('../data/library.json');
+    let library = require('../data/library.json');
     let newGameTitle = document.getElementById('game-title').value;
     let newGameShortcut = document.getElementById('shortcut-path').value;
     let newGameCoverArt = document.getElementById('cover-art-path').value;
+    let newGameCoverArtFilename = newGameCoverArt.split('\\').pop();
     console.log(newGameTitle);
     console.log(newGameShortcut);
-    console.log(newGameCoverArt);
+    console.log(newGameCoverArtFilename);
 
     let gameList = library.games;
 
@@ -27,9 +27,12 @@ function addNewGame() {
             'id': 1,
             'game_title': newGameTitle,
             'shortcut': newGameShortcut,
-            'newGameCoverArt': newGameCoverArt
+            'cover_art': newGameCoverArtFilename
         });
-        jetpack.write('data/library.json', library);
+        console.log(`copying ${newGameCoverArtFilename}`);
+        console.log(`to img/cover_art/${newGameTitle}/${newGameCoverArtFilename}`);
+        jetpack.copy(newGameCoverArt,`img/cover_art/${newGameTitle}/${newGameCoverArtFilename}`);
+        jetpack.write('data/library.json', library); //update library.json
         console.log('library.json successfully updated');
     }
 
