@@ -19,3 +19,8 @@ To-Do Items for Rudder Project
 	*  set up on-click
 	*  set up right-click menu
 	*  find new approach for insecure call in src/api_call.js
+
+*  other
+	*  set default cover art when image could not be found
+	*  create folder in cover art folder for storing new image
+	*  figure out how to choose relative path correctly in AddNewGame.js

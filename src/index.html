@@ -8,7 +8,8 @@
   <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script><!-- Fixes issue of jQuery not loading  https://stackoverflow.com/users/3097649/dale-harders-->
   <script src="web/jquery-3.3.1.min.js"></script>
   <script src="web/bootstrap.min.js"></script>
-  <script src="StartChildApp.js"></script>
+	<script src="StartChildApp.js"></script>
+	<script src="AddNewGame.js"></script>
   <script>if (window.module) module = window.module;</script><!-- Fixes issue of jQuery not loading https://stackoverflow.com/users/3097649/dale-harders-->
   
 </head>
@@ -48,7 +49,7 @@
 				  <div class="input-group-prepend">
 					<span class="input-group-text" id="">Game Title</span>
 				  </div>
-				  <input type="text" class="form-control" placeholder="My Game">
+				  <input type="text" class="form-control" placeholder="My Game" id="game-title">
 				</div>
 			  </div>
 			</div>
@@ -82,7 +83,7 @@
 		</div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-primary" onclick="addNewGame()">Save changes</button>
       </div>
     </div>
   </div>
