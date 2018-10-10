@@ -17,12 +17,16 @@
 	<br/>
 	<section class="container">
 		<div class="row">
-			<div class="col-sm-9"></div>
+			<div class="col-sm-7"></div>
 			<!-- Button to trigger new game modal -->
 			<div class="col-sm-3">
 			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="add-game">
 					+ Add New Game
 			</button>
+			</div>
+			<!-- Button to trigger delete game modal -->
+			<div class="col-sm-1">
+			<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm" id="delete-game">&times; Delete</button>
 			</div>
 	</div>
 	</section>
@@ -85,6 +89,15 @@
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
         <button type="button" class="btn btn-primary" onclick="addNewGame()">Save changes</button>
       </div>
+    </div>
+  </div>
+</div>
+<!-- Delete games modal -->
+
+<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      ...
     </div>
   </div>
 </div>

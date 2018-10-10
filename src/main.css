@@ -31,3 +31,14 @@ p {
 #game-list {
   padding-top: 1.5rem;
 }
+
+/*button for deleting games*/
+#delete-game {
+  background-color: rgb(160, 17, 17);
+  border-color: rgb(160, 17, 17);
+}
+
+#delete-game:hover {
+  background-color: rgb(109, 21, 21);
+  border-color: rgb(109, 21, 21);
+}
