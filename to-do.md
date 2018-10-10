@@ -1,11 +1,12 @@
 To-Do Items for Rudder Project
 ==============================
 *  add ability to add a game to the library from the front-end
-	*  file browser for finding cover art
-	*  file browser for finding executable
-	*  accept input for game name
+	*  ~~file browser for finding cover art~~
+	*  ~~file browser for finding executable~~
+	*  ~~accept input for game name~~
 	*  update library.json with collected information
 	*  add a nice button to the front-end to trigger these functions
+	*  refactor code
 
 *  ~~clean up library~~
 	*  ~~update library.json with games that i own~~
