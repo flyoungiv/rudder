@@ -26,5 +26,5 @@ To-Do Items for Rudder Project
 	*  figure out how to choose relative path correctly in AddNewGame.js and GridLayout.js
 	*  set hover attributes (pointer cursor) for cover arts and path pickers
 	*  add error handling/input validation to add new game function
-	*  move user selected image to cover_art folder
+	*  ~~move user selected image to cover_art folder~~
 	*  add ability to delete game

@@ -8,10 +8,7 @@
   <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script><!-- Fixes issue of jQuery not loading  https://stackoverflow.com/users/3097649/dale-harders-->
   <script src="web/jquery-3.3.1.min.js"></script>
   <script src="web/bootstrap.min.js"></script>
-	<script src="StartChildApp.js"></script>
-	<script src="AddNewGame.js"></script>
   <script>if (window.module) module = window.module;</script><!-- Fixes issue of jQuery not loading https://stackoverflow.com/users/3097649/dale-harders-->
-  
 </head>
 <body>
 	<br/>
@@ -30,9 +27,7 @@
 			</div>
 	</div>
 	</section>
-  <section class="container" id="game-list"></section>
-  <script src="GridLayout.js"></script>
-  
+  <section class="container" id="game-list"></section>  
 
 
 <!-- Modal -->
@@ -92,8 +87,8 @@
     </div>
   </div>
 </div>
-<!-- Delete games modal -->
 
+<!-- Delete games modal -->
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
@@ -101,6 +96,6 @@
     </div>
   </div>
 </div>
- <script src="../renderer.js"></script>
+ <script src="main.js"></script>
 </body>
 </html>
