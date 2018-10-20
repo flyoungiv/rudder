@@ -11,27 +11,11 @@
   <script>if (window.module) module = window.module;</script><!-- Fixes issue of jQuery not loading https://stackoverflow.com/users/3097649/dale-harders-->
 </head>
 <body>
-	<br/>
-	<section class="container">
-		<div class="row">
-			<div class="col-sm-7"></div>
-			<!-- Button to trigger new game modal -->
-			<div class="col-sm-3">
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="add-game">
-					+ Add New Game
-			</button>
-			</div>
-			<!-- Button to trigger delete game modal -->
-			<div class="col-sm-1">
-			<button type="button" onclick="populateGameDeleteList()" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm" id="delete-game">&times; Delete</button>
-			</div>
-	</div>
-	</section>
   <section class="container" id="game-list"></section>  
 
 
 <!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="addGameModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
@@ -60,7 +44,7 @@
 				  </div>	  
 				  <input type="text" class="form-control" placeholder="OS Path Goes Here" id="shortcut-path">
 				  <div class="input-group-append">
-					<span class="input-group-text" id="browse-for-shortcut">&#9730</span>
+					<span class="input-group-text clickable" id="browse-for-shortcut">&#9730</span>
 				  </div>
 				</div>
 			  </div>
@@ -73,7 +57,7 @@
 				  </div>	  
 				  <input type="text" class="form-control" placeholder="Path to Cover Art Goes Here" id="cover-art-path">
 				  <div class="input-group-append">
-					<span class="input-group-text" id="browse-for-picture">&#9730</span>
+					<span class="input-group-text clickable" id="browse-for-picture">&#9730</span>
 				  </div>
 				</div>
 			  </div>
@@ -89,7 +73,7 @@
 </div>
 
 <!-- Delete games modal -->
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+<div class="modal fade bd-example-modal-sm" id="removeGameModal" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
     <div class="modal-content" id="delete-list">
 				<div class="modal-header">
@@ -105,7 +89,7 @@
 <script src="./GridLayout.js"></script>
 <script src="./StartChildApp.js"></script>
 <script src="./AddNewGame.js"></script>
-<script src="./ChooseFileDialog.js"></script>
 <script src="./RemoveGame.js"></script>
+<script src="./renderer.js"></script>
 </body>
 </html>

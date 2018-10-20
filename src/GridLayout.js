@@ -58,6 +58,7 @@ for (let i = 0; i < gameList.length; i++) {
 		imgElement.setAttribute('src', `../img/cover_art/${game.game_title}/${game.cover_art}`);
 		//console.log(`img/cover_art/${game.game_title}/${game.cover_art} exists`);
 	}
+	imgElement.setAttribute('class', 'clickable'); //adding a css class so we can set the cursor to pointer on hover
 	figureElement.appendChild(imgElement);
 
 	//add a listener to the figure  to launch the game when clicked

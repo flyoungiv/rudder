@@ -7,38 +7,20 @@ section .row img {
   width: 100%;
 }
 
-header {
-  padding-top: 20px;
-  border-bottom: solid 1px black;
-  margin-bottom: 20px;
-}
-
 header .row,
 footer .row {
   display: flex;
   align-items: center;
 }
 
-header h1 {
-  font-weight: 700;
-  margin: 0;
-}
-
 p {
   font-size: .75rem;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 #game-list {
   padding-top: 1.5rem;
-}
-
-/*button for deleting games*/
-#delete-game {
-  background-color: rgb(160, 17, 17);
-  border-color: rgb(160, 17, 17);
-}
-
-#delete-game:hover {
-  background-color: rgb(109, 21, 21);
-  border-color: rgb(109, 21, 21);
 }

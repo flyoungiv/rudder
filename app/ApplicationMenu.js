@@ -1,11 +1,11 @@
-const {BrowserWindow, Menu, app, shell, dialog} = require('electron')
+const { BrowserWindow, Menu, app, shell, dialog } = require('electron')
 
 let template = [{
   label: 'File',
   submenu: [{
-	label: 'Exit',
-	accelerator: 'Alt+F4',
-	role: 'quit'
+    label: 'Exit',
+    accelerator: 'Alt+F4',
+    role: 'quit'
   }]
 }, {
   label: 'View',
@@ -62,13 +62,16 @@ let template = [{
     role: 'addGame',
     click: function (item, focusedWindow) {
       if (focusedWindow) {
-        const options = {
-          type: 'info',
-          title: 'Add New Game',
-          buttons: ['Ok'],
-          message: 'This is a placeholder for adding a new game to the library.'
-        }
-        dialog.showMessageBox(focusedWindow, options, function () {})
+        focusedWindow.webContents.send('add-game');
+      }
+    }
+  },
+  {
+    label: 'Remove Game from Library',
+    accelerator: 'CmdOrCtrl+D',
+    click: function (item, focusedWindow) {
+      if (focusedWindow) {
+        focusedWindow.webContents.send('remove-game');
       }
     }
   }]
@@ -83,7 +86,7 @@ let template = [{
   }]
 }]
 
-function findReopenMenuItem () {
+function findReopenMenuItem() {
   const menu = Menu.getApplicationMenu()
   if (!menu) return
 
@@ -142,9 +145,9 @@ if (process.platform === 'darwin') {
   template[3].submenu.push({
     type: 'separator'
   }, {
-    label: 'Bring All to Front',
-    role: 'front'
-  })
+      label: 'Bring All to Front',
+      role: 'front'
+    })
   //addUpdateMenuItems(template[0].submenu, 1)
 }
 

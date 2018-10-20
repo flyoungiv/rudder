@@ -29,13 +29,16 @@ function addNewGame() {
             'shortcut': newGameShortcut,
             'cover_art': newGameCoverArtFilename
         });
-        console.log(`copying ${newGameCoverArtFilename}`);
-        console.log(`to img/cover_art/${newGameTitle}/${newGameCoverArtFilename}`);
-        jetpack.copy(newGameCoverArt,`img/cover_art/${newGameTitle}/${newGameCoverArtFilename}`);
+        if (newGameCoverArtFilename) { //make sure cover art path isn't null or jetpack will bug out and create infinite files
+            console.log(`copying ${newGameCoverArtFilename}`);
+            console.log(`to img/cover_art/${newGameTitle}/${newGameCoverArtFilename}`);
+            jetpack.copy(newGameCoverArt,`img/cover_art/${newGameTitle}/${newGameCoverArtFilename}`);
+        } else {console.log('no cover art specified');}
         jetpack.write('data/library.json', library); //update library.json
         console.log('library.json successfully updated');
     }
 
     console.log(library);
+    location.reload();
 }
 
