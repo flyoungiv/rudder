@@ -4,7 +4,7 @@
   <title>Rudder</title>
   <link rel="stylesheet" type="text/css" href="main.css"/>
   <link rel="stylesheet" type="text/css" href="web/bootstrap.min.css"/>
-  <link rel="stylesheet" type="text/css" href="web/Roboto.css"/>
+	<link rel="stylesheet" type="text/css" href="web/Roboto.css"/>
   <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script><!-- Fixes issue of jQuery not loading  https://stackoverflow.com/users/3097649/dale-harders-->
   <script src="web/jquery-3.3.1.min.js"></script>
   <script src="web/bootstrap.min.js"></script>
@@ -23,7 +23,7 @@
 			</div>
 			<!-- Button to trigger delete game modal -->
 			<div class="col-sm-1">
-			<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm" id="delete-game">&times; Delete</button>
+			<button type="button" onclick="populateGameDeleteList()" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm" id="delete-game">&times; Delete</button>
 			</div>
 	</div>
 	</section>
@@ -91,11 +91,21 @@
 <!-- Delete games modal -->
 <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      ...
-    </div>
-  </div>
+    <div class="modal-content" id="delete-list">
+				<div class="modal-header">
+						<h5 class="modal-title" id="exampleModalLabel">Remove Game...</h5>
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+				</div>
+	</div>
 </div>
- <script src="main.js"></script>
+
+ <!-- <script src="main.js"></script> -->
+<script src="./GridLayout.js"></script>
+<script src="./StartChildApp.js"></script>
+<script src="./AddNewGame.js"></script>
+<script src="./ChooseFileDialog.js"></script>
+<script src="./RemoveGame.js"></script>
 </body>
 </html>

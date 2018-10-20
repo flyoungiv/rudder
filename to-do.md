@@ -28,3 +28,4 @@ To-Do Items for Rudder Project
 	*  add error handling/input validation to add new game function
 	*  ~~move user selected image to cover_art folder~~
 	*  add ability to delete game
+	*  currently if no image is selected then jetpack will try to copy the entire root folder to the image folder

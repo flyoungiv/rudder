@@ -49,14 +49,14 @@ for (let i = 0; i < gameList.length; i++) {
 	//create an <image> with a url to the cover art and then add it to the figure
 	let imgElement = document.createElement('IMG');
 	if (jetpack === null) { //check whether jetpack is running (doesn't run in browser)
-		console.log('running in browser, not going to use jetpack to check for cover art');
+		//console.log('running in browser, not going to use jetpack to check for cover art');
 		imgElement.setAttribute('src', `../img/cover_art/${game.game_title}/${game.cover_art}`);
 	} else if (!jetpack.exists(`img/cover_art/${game.game_title}/${game.cover_art}`)) { //check whether image file exists
 		imgElement.setAttribute('src', '../img/default/default.png'); //set to default image if none exists
-		console.log(`img/cover_art/${game.game_title}/${game.cover_art} does not exist`);
+		//console.log(`img/cover_art/${game.game_title}/${game.cover_art} does not exist`);
 	} else { //if image exists then include it as the cover art for the game
 		imgElement.setAttribute('src', `../img/cover_art/${game.game_title}/${game.cover_art}`);
-		console.log(`img/cover_art/${game.game_title}/${game.cover_art} exists`);
+		//console.log(`img/cover_art/${game.game_title}/${game.cover_art} exists`);
 	}
 	figureElement.appendChild(imgElement);
 
