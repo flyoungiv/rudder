@@ -24,3 +24,28 @@ p {
 #game-list {
   padding-top: 1.5rem;
 }
+
+/*override bottom margin of nav-bar from bootstrap*/
+.navbar-nav {
+  margin: 1rem !important;
+}
+
+/*add some cushion from the top and left edges of the screen*/
+.nav-item {
+  margin: .5rem;
+}
+
+/*set a width for the OS and settings icons*/
+.nav-item > img {
+  width: 3rem;
+}
+
+/*pad the top of the cover art jumbo tron to center it a bit*/
+#game-list {
+  padding-top: 8rem;
+}
+
+/*size the cover art for fullscreen mode*/
+#game-list .col-sm-3 {
+  max-width: 18%;
+}

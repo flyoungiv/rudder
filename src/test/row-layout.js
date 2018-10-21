@@ -9,7 +9,6 @@ html += `<div class="row flex-row flex-nowrap">`;
 gameList.forEach(game => {
 	html += `
   <figure class="col-sm-3">
-    <p>${game[0]}</p>
     <img src="../img/cover_art/${game[0]}/${game[1]}"/>
   </figure>`;
 });

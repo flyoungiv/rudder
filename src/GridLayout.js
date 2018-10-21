@@ -16,7 +16,7 @@ try {
 
 let gameList = library.games;
 
-const numColumns = 4;
+const numColumns = 3;
 const colWidth = 12 / numColumns;
 let rowElement;
 
