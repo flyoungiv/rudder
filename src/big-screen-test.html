@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rudder</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="web/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="web/Roboto.css" />
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script><!-- Fixes issue of jQuery not loading  https://stackoverflow.com/users/3097649/dale-harders-->
+    <script src="web/jquery-3.3.1.min.js"></script>
+    <script src="web/bootstrap.min.js"></script>
+    <script>if (window.module) module = window.module;</script><!-- Fixes issue of jQuery not loading https://stackoverflow.com/users/3097649/dale-harders-->
+</head>
+
+<body>
+    <div class="navbar navbar-expand-sm bg-light">
+<ul class="navbar-nav">
+    <li class="nav-item active">
+    <img src="../img/win.png" />
+</li>
+<li class="nav-item active">
+    <img src="../img/settings.png" />
+</li>
+</ul>
+</div>
+<section class="flex-container" id="game-list-big-screen">
+    <figure tabindex="1">1</figure>
+    <figure tabindex="2" class="game-selected">2</figure>
+    <figure tabindex="3">3</figure>  
+    <figure tabindex="4">4</figure>
+    <figure tabindex="5">5</figure>
+    <figure tabindex="6">6</figure>  
+    <figure tabindex="7">7</figure>
+    <figure tabindex="8">8</figure>
+</section>
+
+<div  class="footer">
+    <div id="rudder-logo">Rudder</div>
+    <div class="button-commands">
+        <span class="badge badge-secondary">TAB</span>
+        <span>&nbsp;Next Game</span>
+    </div>
+    <div class="button-commands">
+        <span class="badge badge-secondary">Shift</span>+<span class="badge badge-secondary">TAB</span>
+        <span>&nbsp;Previous Game</span>
+    </div>
+</div>
+</body>
+
+</html>
