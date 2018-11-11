@@ -65,6 +65,7 @@ p {
   text-align: center;
   line-height: 75px;
   font-size: 30px;
+  transition: all .5s ease;
 }
 
 .game-selected {

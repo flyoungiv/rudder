@@ -10,6 +10,13 @@
     <script src="web/jquery-3.3.1.min.js"></script>
     <script src="web/bootstrap.min.js"></script>
     <script>if (window.module) module = window.module;</script><!-- Fixes issue of jQuery not loading https://stackoverflow.com/users/3097649/dale-harders-->
+    <script>
+    function switchGame(clickedGame) {
+        console.log(clickedGame);
+        $('figure').removeClass('game-selected');
+        document.getElementById(clickedGame).setAttribute('class', 'game-selected');
+    }
+    </script>
 </head>
 
 <body>
@@ -24,14 +31,14 @@
 </ul>
 </div>
 <section class="flex-container" id="game-list-big-screen">
-    <figure tabindex="1">1</figure>
-    <figure tabindex="2" class="game-selected">2</figure>
-    <figure tabindex="3">3</figure>  
-    <figure tabindex="4">4</figure>
-    <figure tabindex="5">5</figure>
-    <figure tabindex="6">6</figure>  
-    <figure tabindex="7">7</figure>
-    <figure tabindex="8">8</figure>
+    <figure id="1" onclick="switchGame('1')" tabindex="1">1</figure>
+    <figure id="2" onclick="switchGame('2')" tabindex="2" class="game-selected">2</figure>
+    <figure id="3" onclick="switchGame('3')" tabindex="3">3</figure>  
+    <figure id="4" onclick="switchGame('4')" tabindex="4">4</figure>
+    <figure id="5" onclick="switchGame('5')" tabindex="5">5</figure>
+    <figure id="6" onclick="switchGame('6')" tabindex="6">6</figure>  
+    <figure id="7" onclick="switchGame('7')" tabindex="7">7</figure>
+    <figure id="8" onclick="switchGame('8')" tabindex="8">8</figure>
 </section>
 
 <div  class="footer">
