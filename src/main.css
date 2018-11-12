@@ -48,6 +48,7 @@ p {
 
 #game-list-big-screen {
   margin-top: 14rem;
+  overflow: hidden;
 }
 
 .flex-container {
@@ -55,6 +56,7 @@ p {
   height: 500px;
   align-items: center;
   background-color: white;
+  transition: all .5s ease;
 }
 
 .flex-container > figure {
@@ -65,7 +67,6 @@ p {
   text-align: center;
   line-height: 75px;
   font-size: 30px;
-  transition: all .5s ease;
 }
 
 .game-selected {

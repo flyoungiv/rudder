@@ -9,49 +9,79 @@
     <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script><!-- Fixes issue of jQuery not loading  https://stackoverflow.com/users/3097649/dale-harders-->
     <script src="web/jquery-3.3.1.min.js"></script>
     <script src="web/bootstrap.min.js"></script>
+    <script src="web/jquery-ui.min.js"></script>
     <script>if (window.module) module = window.module;</script><!-- Fixes issue of jQuery not loading https://stackoverflow.com/users/3097649/dale-harders-->
     <script>
-    function switchGame(clickedGame) {
-        console.log(clickedGame);
-        $('figure').removeClass('game-selected');
-        document.getElementById(clickedGame).setAttribute('class', 'game-selected');
-    }
+        function switchGame(clickedGame) {
+            console.log(clickedGame);
+            $('figure').removeClass('game-selected', 500);
+            $(clickedGame).addClass('game-selected', 500);
+        }
+    </script>
+    <script>
+        let gameElements;
+        let currentGameIndex = 2;
+        $(document).ready(() => {
+            gameElements = $('#game-list-big-screen').children();
+            $(gameElements[currentGameIndex]).focus();
+            $(gameElements[currentGameIndex]).addClass('game-selected', 200);
+        });
+        $(document).keyup(function (event) {
+            console.log(`pressed ${event.key}`);
+            $('figure').removeClass('game-selected');
+            if (event.key === 'ArrowRight') {
+                if (currentGameIndex + 1 === gameElements.length) {
+                    console.log('End of the line, bub.');
+                } else {
+                    currentGameIndex++;
+                }
+            }
+            if (event.key === 'ArrowLeft') {
+                if (currentGameIndex === 0) {
+                    console.log('Buck stops here.');
+                } else {
+                    currentGameIndex--;
+                }
+            }
+            $(gameElements[currentGameIndex]).focus();
+            $(gameElements[currentGameIndex]).addClass('game-selected', 200);
+        });
     </script>
 </head>
 
 <body>
     <div class="navbar navbar-expand-sm bg-light">
-<ul class="navbar-nav">
-    <li class="nav-item active">
-    <img src="../img/win.png" />
-</li>
-<li class="nav-item active">
-    <img src="../img/settings.png" />
-</li>
-</ul>
-</div>
-<section class="flex-container" id="game-list-big-screen">
-    <figure id="1" onclick="switchGame('1')" tabindex="1">1</figure>
-    <figure id="2" onclick="switchGame('2')" tabindex="2" class="game-selected">2</figure>
-    <figure id="3" onclick="switchGame('3')" tabindex="3">3</figure>  
-    <figure id="4" onclick="switchGame('4')" tabindex="4">4</figure>
-    <figure id="5" onclick="switchGame('5')" tabindex="5">5</figure>
-    <figure id="6" onclick="switchGame('6')" tabindex="6">6</figure>  
-    <figure id="7" onclick="switchGame('7')" tabindex="7">7</figure>
-    <figure id="8" onclick="switchGame('8')" tabindex="8">8</figure>
-</section>
+        <ul class="navbar-nav">
+            <li class="nav-item active">
+                <img src="../img/win.png" />
+            </li>
+            <li class="nav-item active">
+                <img src="../img/settings.png" />
+            </li>
+        </ul>
+    </div>
+    <section class="flex-container" id="game-list-big-screen">
+        <figure id="1" onclick="switchGame('#1')" tabindex="0">1</figure>
+        <figure id="2" onclick="switchGame('#2')" tabindex="0">2</figure>
+        <figure id="3" onclick="switchGame('#3')" tabindex="0">3</figure>
+        <figure id="4" onclick="switchGame('#4')" tabindex="0">4</figure>
+        <figure id="5" onclick="switchGame('#5')" tabindex="0">5</figure>
+        <figure id="6" onclick="switchGame('#6')" tabindex="0">6</figure>
+        <figure id="7" onclick="switchGame('#7')" tabindex="0">7</figure>
+        <figure id="8" onclick="switchGame('#8')" tabindex="0">8</figure>
+    </section>
 
-<div  class="footer">
-    <div id="rudder-logo">Rudder</div>
-    <div class="button-commands">
-        <span class="badge badge-secondary">TAB</span>
-        <span>&nbsp;Next Game</span>
+    <div class="footer">
+        <div id="rudder-logo">Rudder</div>
+        <div class="button-commands">
+            <span class="badge badge-secondary">&rarr;</span>
+            <span>&nbsp;Next Game</span>
+        </div>
+        <div class="button-commands">
+            <span class="badge badge-secondary">&larr;</span>
+            <span>&nbsp;Previous Game</span>
+        </div>
     </div>
-    <div class="button-commands">
-        <span class="badge badge-secondary">Shift</span>+<span class="badge badge-secondary">TAB</span>
-        <span>&nbsp;Previous Game</span>
-    </div>
-</div>
 </body>
 
 </html>
