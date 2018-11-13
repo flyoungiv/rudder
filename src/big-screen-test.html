@@ -20,7 +20,7 @@
     </script>
     <script>
         let gameElements;
-        let currentGameIndex = 2;
+        let currentGameIndex = 0;
         let currentMargin = 0;
 
         $(document).ready(() => {
@@ -35,10 +35,10 @@
                     console.log('End of the line, bub.');
                 } else {
                     let previousGameIndex = currentGameIndex;
-                    currentGameIndex ++;
+                    currentGameIndex++;
                     $(gameElements[currentGameIndex]).addClass('game-selected', 200);
                     $(gameElements[previousGameIndex]).removeClass('game-selected', 200);
-                    if(currentGameIndex > 2) {currentMargin -= 345};
+                    if (currentGameIndex > 2) { currentMargin -= 345 };
                 }
             }
             if (event.key === 'ArrowLeft') {
@@ -46,10 +46,10 @@
                     console.log('Buck stops here.');
                 } else {
                     let previousGameIndex = currentGameIndex;
-                    currentGameIndex --;
+                    currentGameIndex--;
                     $(gameElements[currentGameIndex]).addClass('game-selected', 200);
                     $(gameElements[previousGameIndex]).removeClass('game-selected', 200);
-                    if(currentGameIndex > 1) {currentMargin += 345};
+                    if (currentGameIndex > 1) { currentMargin += 345 };
                 }
             }
             if (event.key === 'Enter') {
@@ -63,16 +63,11 @@
 </head>
 
 <body>
-    <div class="navbar navbar-expand-sm bg-light">
-        <ul class="navbar-nav">
-            <li class="nav-item active">
-                <img src="../img/win.png" />
-            </li>
-            <li class="nav-item active">
-                <img src="../img/settings.png" />
-            </li>
-        </ul>
+    <div class="couch-header">
+        <div class="menu-button"><img src="../img/win.png" /></div>
+        <div class="menu-button"><img src="../img/settings.png" /></div>
     </div>
+
     <section class="flex-container" id="game-list-big-screen">
         <figure id="1" onclick="switchGame('#1')" tabindex="-1">1</figure>
         <figure id="2" onclick="switchGame('#2')" tabindex="-1">2</figure>
