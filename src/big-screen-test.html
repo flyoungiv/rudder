@@ -21,30 +21,43 @@
     <script>
         let gameElements;
         let currentGameIndex = 2;
+        let currentMargin = 0;
+
         $(document).ready(() => {
             gameElements = $('#game-list-big-screen').children();
             $(gameElements[currentGameIndex]).focus();
             $(gameElements[currentGameIndex]).addClass('game-selected', 200);
         });
-        $(document).keyup(function (event) {
+        $(document).keydown(function (event) {
             console.log(`pressed ${event.key}`);
-            $('figure').removeClass('game-selected');
             if (event.key === 'ArrowRight') {
                 if (currentGameIndex + 1 === gameElements.length) {
                     console.log('End of the line, bub.');
                 } else {
-                    currentGameIndex++;
+                    let previousGameIndex = currentGameIndex;
+                    currentGameIndex ++;
+                    $(gameElements[currentGameIndex]).addClass('game-selected', 200);
+                    $(gameElements[previousGameIndex]).removeClass('game-selected', 200);
+                    if(currentGameIndex > 2) {currentMargin -= 345};
                 }
             }
             if (event.key === 'ArrowLeft') {
                 if (currentGameIndex === 0) {
                     console.log('Buck stops here.');
                 } else {
-                    currentGameIndex--;
+                    let previousGameIndex = currentGameIndex;
+                    currentGameIndex --;
+                    $(gameElements[currentGameIndex]).addClass('game-selected', 200);
+                    $(gameElements[previousGameIndex]).removeClass('game-selected', 200);
+                    if(currentGameIndex > 1) {currentMargin += 345};
                 }
             }
+            if (event.key === 'Enter') {
+                alert(`Starting game ${$(':focus').attr('id')}`);
+            }
+
             $(gameElements[currentGameIndex]).focus();
-            $(gameElements[currentGameIndex]).addClass('game-selected', 200);
+            $('#game-list-big-screen').css('margin-left', `${currentMargin}px`);
         });
     </script>
 </head>
@@ -61,25 +74,29 @@
         </ul>
     </div>
     <section class="flex-container" id="game-list-big-screen">
-        <figure id="1" onclick="switchGame('#1')" tabindex="0">1</figure>
-        <figure id="2" onclick="switchGame('#2')" tabindex="0">2</figure>
-        <figure id="3" onclick="switchGame('#3')" tabindex="0">3</figure>
-        <figure id="4" onclick="switchGame('#4')" tabindex="0">4</figure>
-        <figure id="5" onclick="switchGame('#5')" tabindex="0">5</figure>
-        <figure id="6" onclick="switchGame('#6')" tabindex="0">6</figure>
-        <figure id="7" onclick="switchGame('#7')" tabindex="0">7</figure>
-        <figure id="8" onclick="switchGame('#8')" tabindex="0">8</figure>
+        <figure id="1" onclick="switchGame('#1')" tabindex="-1">1</figure>
+        <figure id="2" onclick="switchGame('#2')" tabindex="-1">2</figure>
+        <figure id="3" onclick="switchGame('#3')" tabindex="-1">3</figure>
+        <figure id="4" onclick="switchGame('#4')" tabindex="-1">4</figure>
+        <figure id="5" onclick="switchGame('#5')" tabindex="-1">5</figure>
+        <figure id="6" onclick="switchGame('#6')" tabindex="-1">6</figure>
+        <figure id="7" onclick="switchGame('#7')" tabindex="-1">7</figure>
+        <figure id="8" onclick="switchGame('#8')" tabindex="-1">8</figure>
     </section>
 
     <div class="footer">
         <div id="rudder-logo">Rudder</div>
         <div class="button-commands">
+            <span class="badge badge-secondary">ENTER</span>
+            <span>Start Game</span>
+        </div>
+        <div class="button-commands">
             <span class="badge badge-secondary">&rarr;</span>
-            <span>&nbsp;Next Game</span>
+            <span>Next</span>
         </div>
         <div class="button-commands">
             <span class="badge badge-secondary">&larr;</span>
-            <span>&nbsp;Previous Game</span>
+            <span>Previous</span>
         </div>
     </div>
 </body>
