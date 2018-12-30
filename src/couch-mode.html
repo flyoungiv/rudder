@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Rudder</title>
+    <link rel="stylesheet" type="text/css" href="main.css" />
+    <link rel="stylesheet" type="text/css" href="web/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="web/Roboto.css" />
+    <script>if (typeof module === 'object') { window.module = module; module = undefined; }</script><!-- Fixes issue of jQuery not loading  https://stackoverflow.com/users/3097649/dale-harders-->
+    <script src="web/jquery-3.3.1.min.js"></script>
+    <script src="web/bootstrap.min.js"></script>
+    <script src="web/jquery-ui.min.js"></script>
+    <script>if (window.module) module = window.module;</script><!-- Fixes issue of jQuery not loading https://stackoverflow.com/users/3097649/dale-harders-->
+    <script>
+        function switchGame(clickedGame) {
+            console.log(clickedGame);
+            $('figure').removeClass('game-selected', 500);
+            $(clickedGame).addClass('game-selected', 500);
+        }
+    </script>
+    <script src="renderer.js"></script>
+    <script>
+        let gameElements;
+        let currentGameIndex = 0;
+        let currentMargin = 0;
+        let currentRow = 1;
+        let currentMenuItem = 0;
+
+        $(document).ready(() => {
+            gameElements = $('#game-list-big-screen').children();
+            $(gameElements[currentGameIndex]).focus();
+            $(gameElements[currentGameIndex]).addClass('game-selected', 0);
+            $(gameElements[currentGameIndex].firstChild).addClass('art-selected', 200);
+            $('#game-list-big-screen').css('margin-top', `${($(document).height() - 486) / 2}px`);
+        });
+        $(document).keydown(function (event) {
+            console.log(`pressed ${event.key}`);
+            if (event.key === 'ArrowRight') {
+                if (currentRow === 1) {
+                    if (currentGameIndex + 1 === gameElements.length) {
+                        console.log('End of the line, bub.');
+                    } else {
+                        let previousGameIndex = currentGameIndex;
+                        currentGameIndex++;
+                        $(gameElements[currentGameIndex]).addClass('game-selected', 0);
+                        $(gameElements[currentGameIndex].firstChild).addClass('art-selected', 200);
+                        $(gameElements[previousGameIndex]).removeClass('game-selected', 0);
+                        $(gameElements[previousGameIndex].firstChild).removeClass('art-selected', 200);
+                        if (currentGameIndex > 2) { currentMargin -= 345 };
+                    }
+                }
+                if (currentRow === 0) {
+                    if (currentMenuItem === 1) {
+                        console.log('rightmost menu item reached');
+                    } else {
+                        currentMenuItem++;
+                        $('#os-button > img').removeClass('menu-selected', 0);
+                        $('#settings-button > img').addClass('menu-selected', 200);
+                    }
+                }
+            }
+            if (event.key === 'ArrowLeft') {
+                if (currentRow === 1) {
+                    if (currentGameIndex === 0) {
+                        console.log('Buck stops here.');
+                    } else {
+                        let previousGameIndex = currentGameIndex;
+                        currentGameIndex--;
+                        $(gameElements[currentGameIndex]).addClass('game-selected', 0);
+                        $(gameElements[currentGameIndex].firstChild).addClass('art-selected', 200);
+                        $(gameElements[previousGameIndex]).removeClass('game-selected', 0);
+                        $(gameElements[previousGameIndex].firstChild).removeClass('art-selected', 200);
+                        if (currentGameIndex > 1) { currentMargin += 345 };
+                    }
+                }
+                if (currentRow === 0) {
+                    if (currentMenuItem === 0) {
+                        console.log('leftmost menu item reached');
+                    } else {
+                        currentMenuItem--;
+                        $('#settings-button > img').removeClass('menu-selected', 200);
+                        $('#os-button > img').addClass('menu-selected', 200);
+                    }
+                }
+            }
+            if (event.key === 'ArrowUp') {
+                currentRow = 0;
+                currentMenuItem = 0;
+                $(gameElements[currentGameIndex]).removeClass('game-selected', 0);
+                $(gameElements[currentGameIndex].firstChild).removeClass('art-selected', 200);
+                $('#os-button > img').addClass('menu-selected', 200);
+            }
+            if (event.key === 'ArrowDown') {
+                currentRow = 1;
+                $('#os-button > img').removeClass('menu-selected', 200);
+                $('#settings-button > img').removeClass('menu-selected', 200);
+                $(gameElements[currentGameIndex]).addClass('game-selected', 0);
+                $(gameElements[currentGameIndex].firstChild).addClass('art-selected', 200);
+            }
+            if (event.key === 'Enter') {
+                if (currentRow === 1) {
+                    alert(`Starting game ${$(':focus').attr('id')}`);
+                }
+                if (currentRow === 0) {
+                    //alert(`Selected the ${$('.menu-selected').closest('div').attr('id')}`);
+                    ipcRenderer.send('close-couch-mode');
+                }
+            }
+
+            $(gameElements[currentGameIndex]).focus();
+            $('#game-list-big-screen').css('margin-left', `${currentMargin}px`);
+        });
+    </script>
+</head>
+
+<body>
+    <div class="couch-header">
+        <div class="menu-button" id="os-button"><img src="../img/win.png" /></div>
+        <div class="menu-button" id="settings-button"><img src="../img/settings.png" /></div>
+    </div>
+
+    <section class="flex-container" id="game-list-big-screen">
+        <!--   <figure id="1" onclick="switchGame('#1')" tabindex="-1">1</figure>
+        <figure id="2" onclick="switchGame('#2')" tabindex="-1">2</figure>
+        <figure id="3" onclick="switchGame('#3')" tabindex="-1">3</figure>
+        <figure id="4" onclick="switchGame('#4')" tabindex="-1">4</figure>
+        <figure id="5" onclick="switchGame('#5')" tabindex="-1">5</figure>
+        <figure id="6" onclick="switchGame('#6')" tabindex="-1">6</figure>
+        <figure id="7" onclick="switchGame('#7')" tabindex="-1">7</figure>
+        <figure id="8" onclick="switchGame('#8')" tabindex="-1">8</figure> -->
+    </section>
+    <script src="GridLayoutCouch.js"></script>
+    <div class="footer">
+        <div id="rudder-logo">Rudder</div>
+        <div class="button-commands">
+            <span class="badge badge-secondary">ENTER</span>
+            <span>Start Game</span>
+        </div>
+        <div class="button-commands">
+            <span class="badge badge-secondary">&rarr;</span>
+            <span>Next</span>
+        </div>
+        <div class="button-commands">
+            <span class="badge badge-secondary">&larr;</span>
+            <span>Previous</span>
+        </div>
+    </div>
+</body>
+
+</html>

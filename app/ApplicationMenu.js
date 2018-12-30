@@ -54,8 +54,8 @@ let template = [{
     }
   }]
 }, {
-  label: 'Games',
-  role: 'games',
+  label: 'Rudder',
+  role: 'rudder',
   submenu: [{
     label: 'Add Game to Library',
     accelerator: 'CmdOrCtrl+G',
@@ -73,6 +73,16 @@ let template = [{
       if (focusedWindow) {
         focusedWindow.webContents.send('remove-game');
       }
+    }
+  },
+  {
+    label: 'Launch Couch Mode',
+    accelerator: '',
+    click: () => {
+      console.log('launching couch mode');
+      let win = new BrowserWindow({ width: 1920, height: 1080, fullscreen: true, frame: false });
+      win.loadFile('src/couch-mode.html');
+      console.log(BrowserWindow.getAllWindows());
     }
   }]
 }, {

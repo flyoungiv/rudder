@@ -42,25 +42,36 @@ p {
   width: 3rem;
 }
 
+.menu-button > img.menu-selected {
+  width: 4rem;
+}
+
 #game-list {
   padding-top: 1.5rem;
 }
 
 #game-list-big-screen {
-  margin-top: 14rem;
+  margin-top: 17rem;
   overflow: hidden;
+}
+
+#game-list-big-screen > figure > img {
+  max-width: 285px;
+}
+
+.art-selected {
+  max-width: 320px !important;
 }
 
 .flex-container {
   display: flex;
-  height: 500px;
   align-items: center;
   background-color: white;
   transition: all .5s ease;
 }
 
 .flex-container > figure {
-  background-color: lightgray;
+  /*background-color: lightgray;*/
   min-width: 285px;
   height: 380px;
   margin: 30px;
@@ -70,7 +81,7 @@ p {
 }
 
 .game-selected {
-  background-color: goldenrod !important;
+  /*background-color: goldenrod !important;*/
   min-width: 320px !important;
   min-height: 426px !important;
 }

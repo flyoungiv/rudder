@@ -7,7 +7,7 @@ let mainWindow
 
 function createWindow () {
   // Create the browser window.
-  mainWindow = new BrowserWindow({width: 860, height: 680})
+  mainWindow = new BrowserWindow({width: 860, height: 680, fullscreen: false})
 
   // and load the index.html of the app.
   mainWindow.loadFile('src/index.html')
@@ -70,4 +70,9 @@ ipcMain.on('choose-path-to-cover-art', (event) => {
       event.sender.send('selected-cover-art-path', files)
     }
   })
+})
+
+ipcMain.on('close-couch-mode', (event) => {
+  BrowserWindow.getAllWindows()[1].close();
+  console.log('msg received in main');
 })
