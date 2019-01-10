@@ -1,0 +1,145 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="semantic-ui/semantic.min.js"></script>
+  <style>
+    .game-hover-options-hidden {
+    /*display: none !important;*/
+    opacity: 0;
+  }
+
+  .game-hover-options:hover .game-hover-options-hidden {
+    /* display: block !important; */
+    opacity: 1;
+    transition: all 1s ease;
+  }
+
+  .game-hover-options-color {
+    filter: grayscale(70%);
+  }
+
+  .game-hover-options:hover .game-hover-options-color {
+    filter: grayscale(0%);
+    transition: all 1s ease;
+  }
+
+	/*semantic-ui overrides*/
+	.ui.input>input {
+		border-radius: 0;
+	}
+	.ui.menu {
+		border-radius: 0;
+	}
+    </style>
+</head>
+
+<body>
+
+  <div class="column">
+    <div class="ui fluid vertical menu">
+      <a class="item game-hover-options">
+        <div class="ui grid">
+          <div class="three wide column middle aligned content">
+            <img class="ui fluid image" src="img/clr.jpg" />
+          </div>
+          <div class="eight wide column middle aligned content" style="padding-left: 0">
+            <h4 class="ui medium header">Chopper Rescue</h4>
+            <p>Last played: Today</p>
+          </div>
+          <div class="five wide column middle aligned content game-hover-options-hidden">
+            <button class="cicular ui icon right floated button"><i class="icon settings"></i></button>
+            <button class="cicular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+          </div>
+        </div>
+      </a>
+      <a class="item game-hover-options">
+          <div class="ui grid">
+            <div class="three wide column middle aligned content">
+              <img class="ui fluid image" src="img/bw.png" />
+            </div>
+            <div class="eight wide column middle aligned content" style="padding-left: 0">
+              <h4 class="ui medium header">Chopper Rescue 2</h4>
+              <p>Last played: Today</p>
+            </div>
+            <div class="five wide column middle aligned content game-hover-options-hidden">
+              <button class="cicular ui icon right floated button"><i class="icon settings"></i></button>
+              <button class="cicular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            </div>
+          </div>
+      </a>
+      <a class="item game-hover-options">
+          <div class="ui grid">
+            <div class="three wide column middle aligned content">
+              <img class="ui tiny circular image" src="img/square.jpg" />
+            </div>
+            <div class="eight wide column middle aligned content" style="padding-left: 0">
+              <h4 class="ui medium header">Chopper Rescue 3</h4>
+              <p>Last played: Today</p>
+            </div>
+            <div class="five wide column middle aligned content game-hover-options-hidden">
+              <button class="cicular ui icon right floated button"><i class="icon settings"></i></button>
+              <button class="cicular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            </div>
+          </div>
+      </a>
+      <a class="item game-hover-options">
+          <div class="ui grid">
+            <div class="three wide column middle aligned content">
+              <img class="ui avatar image" src="img/bw.png" />
+            </div>
+            <div class="eight wide column middle aligned content" style="padding-left: 0">
+              <h4 class="ui medium header">Chopper Rescue 4</h4>
+              <p>Last played: Today</p>
+            </div>
+            <div class="five wide column middle aligned content game-hover-options-hidden">
+              <button class="cicular ui icon right floated button"><i class="icon settings"></i></button>
+              <button class="cicular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            </div>
+          </div>
+      </a>
+      <a class="item game-hover-options">
+          <div class="ui grid">
+            <div class="three wide column middle aligned content">
+                <div class="ui instant fade reveal">
+                    <div class="visible content">
+                        <img class="ui fluid image" src="img/bw.png" />
+                      </div>
+                    <div class="hidden content">
+                        <img class="ui fluid image" src="img/clr.jpg" />
+                    </div>
+                  </div>
+              
+            </div>
+            <div class="eight wide column middle aligned content" style="padding-left: 0">
+              <h4 class="ui medium header">Chopper Rescue 5</h4>
+              <p>Last played: Today</p>
+            </div>
+            <div class="five wide column middle aligned content game-hover-options-hidden">
+              <button class="cicular ui icon right floated button"><i class="icon settings"></i></button>
+              <button class="cicular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            </div>
+          </div>
+      </a>
+      <a class="item game-hover-options">
+          <div class="ui grid">
+            <div class="three wide column middle aligned content">
+                <img class="ui fluid image game-hover-options-color" src="img/clr.jpg" />
+            </div>
+            <div class="eight wide column middle aligned content" style="padding-left: 0">
+              <h4 class="ui medium header">Chopper Rescue 6</h4>
+              <p>Last played: Today</p>
+            </div>
+            <div class="five wide column middle aligned content game-hover-options-hidden">
+              <button class="cicular ui icon right floated button"><i class="icon settings"></i></button>
+              <button class="cicular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            </div>
+          </div>
+      </a>
+    </div>
+  </div>
+
+</body>
+
+</html>

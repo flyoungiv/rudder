@@ -6,11 +6,23 @@
   <script src="semantic-ui/semantic.min.js"></script>
   <style>
     .game-hover-options-hidden {
-    display: none !important;
+    /*display: none !important;*/
+    opacity: 0;
   }
 
   .game-hover-options:hover .game-hover-options-hidden {
-    display: block !important;
+    /* display: block !important; */
+    opacity: 1;
+    transition: all 1s ease;
+  }
+
+  .game-hover-options-color {
+    filter: grayscale(70%);
+  }
+
+  .game-hover-options:hover .game-hover-options-color {
+    filter: grayscale(0%);
+    transition: all 1s ease;
   }
 
 	/*semantic-ui overrides*/
@@ -39,8 +51,8 @@
             <p>Last played: &nbsp &nbsp --</p>
           </div>
           <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="cicular ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="cicular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            <button class="ui icon right floated button"><i class="icon settings"></i></button>
+            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
           </div>
         </div>
       </a>
@@ -51,8 +63,8 @@
             <p>Last played: &nbsp &nbsp --</p>
           </div>
           <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="cicular ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="cicular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            <button class="ui icon right floated button"><i class="icon settings"></i></button>
+            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
           </div>
         </div>
       </a>
@@ -63,8 +75,8 @@
             <p>Last played: &nbsp &nbsp --</p>
           </div>
           <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="cicular ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="cicular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            <button class="ui icon right floated button"><i class="icon settings"></i></button>
+            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
           </div>
         </div>
       </a>
@@ -75,8 +87,8 @@
             <p>Last played: &nbsp &nbsp --</p>
           </div>
           <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="cicular ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="cicular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            <button class="ui icon right floated button"><i class="icon settings"></i></button>
+            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
           </div>
         </div>
       </a>
@@ -87,8 +99,8 @@
             <p>Last played: &nbsp &nbsp --</p>
           </div>
           <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="cicular ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="cicular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            <button class="ui icon right floated button"><i class="icon settings"></i></button>
+            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
           </div>
         </div>
       </a>
@@ -99,8 +111,8 @@
             <p>Last played: &nbsp &nbsp --</p>
           </div>
           <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="cicular ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="cicular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            <button class="ui icon right floated button"><i class="icon settings"></i></button>
+            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
           </div>
         </div>
       </a>
@@ -111,8 +123,8 @@
             <p>Last played: &nbsp &nbsp --</p>
           </div>
           <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="cicular ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="cicular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            <button class="ui icon right floated button"><i class="icon settings"></i></button>
+            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
           </div>
         </div>
       </a>
@@ -123,22 +135,43 @@
             <p>Last played: &nbsp &nbsp --</p>
           </div>
           <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="cicular ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="cicular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            <button class="ui icon right floated button"><i class="icon settings"></i></button>
+            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
           </div>
         </div>
       </a>
+      <a class="item game-hover-options">
+          <div class="ui grid">
+            <div class="three wide column middle aligned content">
+              <img class="ui tiny circular image" src="img/square.jpg" />
+            </div>
+            <div class="eight wide column middle aligned content" style="padding-left: 0">
+              <h4 class="ui medium header">Chopper Rescue 3</h4>
+              <p>Last played: Today</p>
+            </div>
+            <div class="five wide column middle aligned content game-hover-options-hidden">
+              <button class="ui icon right floated button"><i class="icon settings"></i></button>
+              <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            </div>
+          </div>
+      </a>
+      <a class="item game-hover-options">
+          <div class="ui grid">
+            <div class="three wide column middle aligned content">
+                <img class="ui fluid image game-hover-options-color" src="img/clr.jpg" />
+            </div>
+            <div class="eight wide column middle aligned content" style="padding-left: 0">
+              <h4 class="ui medium header">Chopper Rescue 6</h4>
+              <p>Last played: Today</p>
+            </div>
+            <div class="five wide column middle aligned content game-hover-options-hidden">
+              <button class="circular ui icon right floated button"><i class="icon settings"></i></button>
+              <button class="circular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            </div>
+          </div>
+      </a>
     </div>
   </div>
-
-        <div class="ui instant fade reveal">
-          <div class="visible content">
-            <img src="img/bw.png" class="ui small image">
-          </div>
-          <div class="hidden content">
-            <img src="img/clr.jpg" class="ui small image">
-          </div>
-        </div>
 
 </body>
 
