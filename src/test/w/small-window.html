@@ -1,177 +1,169 @@
 <html>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css">
-  <script src="jquery-3.3.1.min.js"></script>
-  <script src="semantic-ui/semantic.min.js"></script>
-  <style>
-    .game-hover-options-hidden {
-    /*display: none !important;*/
-    opacity: 0;
-  }
-
-  .game-hover-options:hover .game-hover-options-hidden {
-    /* display: block !important; */
-    opacity: 1;
-    transition: all 1s ease;
-  }
-
-  .game-hover-options-color {
-    filter: grayscale(70%);
-  }
-
-  .game-hover-options:hover .game-hover-options-color {
-    filter: grayscale(0%);
-    transition: all 1s ease;
-  }
-
-	/*semantic-ui overrides*/
-	.ui.input>input {
-		border-radius: 0;
-	}
-	.ui.menu {
-		border-radius: 0;
-	}
+    <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css">
+    <script src="jquery-3.3.1.min.js"></script>
+    <script src="semantic-ui/semantic.min.js"></script>
+    <style>
+        .game-hover-options-hidden {
+            /*display: none !important;*/
+            opacity: 0;
+        }
+        
+        .game-hover-options:hover .game-hover-options-hidden {
+            /* display: block !important; */
+            opacity: 1;
+            transition: all 1s ease;
+        }
+        /*semantic-ui overrides*/
+        
+        .ui.input>input {
+            border-radius: 0;
+        }
+        
+        .ui.menu {
+            border-radius: 0;
+        }
     </style>
 </head>
 
 <body>
-  <div class="column">
-    <div class="ui big fluid left icon input ">
-      <input type="text" placeholder="Start typing to filter games...">
-      <i class="gamepad icon"></i>
+
+<div class="ui top fixed menu">
+  <div class="item" style="width: 100%">
+      <div class="ui big transparent left icon input">
+          <input type="text" placeholder="Start typing to filter games...">
+          <i class="gamepad icon" "></i>
+      </div>
     </div>
-  </div>
-  <div class="column">
-    <div class="ui fluid vertical menu">
-      <a class="item game-hover-options">
-        <div class="ui grid">
-          <div class="eleven wide column">
-            <h4 class="ui medium header">Window Cleaner Ultimate</h4>
-            <p>Last played: &nbsp &nbsp --</p>
-          </div>
-          <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
-          </div>
-        </div>
-      </a>
-      <a class="item game-hover-options">
-        <div class="ui grid">
-          <div class="eleven wide column">
-            <h4 class="ui medium header">Zoo Keeper 3</h4>
-            <p>Last played: &nbsp &nbsp --</p>
-          </div>
-          <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
-          </div>
-        </div>
-      </a>
-      <a class="item game-hover-options">
-        <div class="ui grid">
-          <div class="eleven wide column">
-            <h4 class="ui medium header">Bumblebee Simulator</h4>
-            <p>Last played: &nbsp &nbsp --</p>
-          </div>
-          <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
-          </div>
-        </div>
-      </a>
-      <a class="item game-hover-options">
-        <div class="ui grid">
-          <div class="eleven wide column">
-            <h4 class="ui medium header">Captain Smasher</h4>
-            <p>Last played: &nbsp &nbsp --</p>
-          </div>
-          <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
-          </div>
-        </div>
-      </a>
-      <a class="item game-hover-options">
-        <div class="ui grid">
-          <div class="eleven wide column">
-            <h4 class="ui medium header">Rogue Assassin VII</h4>
-            <p>Last played: &nbsp &nbsp --</p>
-          </div>
-          <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
-          </div>
-        </div>
-      </a>
-      <a class="item game-hover-options">
-        <div class="ui grid">
-          <div class="eleven wide column">
-            <h4 class="ui medium header">Draw Your Weapon!</h4>
-            <p>Last played: &nbsp &nbsp --</p>
-          </div>
-          <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
-          </div>
-        </div>
-      </a>
-      <a class="item game-hover-options">
-        <div class="ui grid">
-          <div class="eleven wide column">
-            <h4 class="ui medium header">Comet Exploder</h4>
-            <p>Last played: &nbsp &nbsp --</p>
-          </div>
-          <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
-          </div>
-        </div>
-      </a>
-      <a class="item game-hover-options">
-        <div class="ui grid">
-          <div class="eleven wide column">
-            <h4 class="ui medium header">Minesweeper: The Big One</h4>
-            <p>Last played: &nbsp &nbsp --</p>
-          </div>
-          <div class="five wide column middle aligned content game-hover-options-hidden">
-            <button class="ui icon right floated button"><i class="icon settings"></i></button>
-            <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
-          </div>
-        </div>
-      </a>
-      <a class="item game-hover-options">
-          <div class="ui grid">
-            <div class="three wide column middle aligned content">
-              <img class="ui tiny circular image" src="img/square.jpg" />
+</div>
+
+<div class="ui grid ">
+    <div class="column ">
+      <div class="ui fluid vertical menu ">
+        <a class="item game-hover-options ">
+          <div class="ui grid ">
+            <div class="eleven wide column ">
+              <h4 class="ui medium header ">Window Cleaner Ultimate</h4>
+              <p>Last played: &nbsp &nbsp --</p>
             </div>
-            <div class="eight wide column middle aligned content" style="padding-left: 0">
-              <h4 class="ui medium header">Chopper Rescue 3</h4>
-              <p>Last played: Today</p>
-            </div>
-            <div class="five wide column middle aligned content game-hover-options-hidden">
-              <button class="ui icon right floated button"><i class="icon settings"></i></button>
-              <button class="ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            <div class="five wide column middle aligned content game-hover-options-hidden ">
+              <button class="ui icon right floated button "><i class="icon settings "></i></button>
+              <button class="ui icon positive right floated button "><i class="play circle outline icon "></i></button>
             </div>
           </div>
-      </a>
-      <a class="item game-hover-options">
-          <div class="ui grid">
-            <div class="three wide column middle aligned content">
-                <img class="ui fluid image game-hover-options-color" src="img/clr.jpg" />
+        </a>
+        <a class="item game-hover-options ">
+          <div class="ui grid ">
+            <div class="eleven wide column ">
+              <h4 class="ui medium header ">Zoo Keeper 3</h4>
+              <p>Last played: &nbsp &nbsp --</p>
             </div>
-            <div class="eight wide column middle aligned content" style="padding-left: 0">
-              <h4 class="ui medium header">Chopper Rescue 6</h4>
-              <p>Last played: Today</p>
-            </div>
-            <div class="five wide column middle aligned content game-hover-options-hidden">
-              <button class="circular ui icon right floated button"><i class="icon settings"></i></button>
-              <button class="circular ui icon positive right floated button"><i class="play circle outline icon"></i></button>
+            <div class="five wide column middle aligned content game-hover-options-hidden ">
+              <button class="ui icon right floated button "><i class="icon settings "></i></button>
+              <button class="ui icon positive right floated button "><i class="play circle outline icon "></i></button>
             </div>
           </div>
-      </a>
+        </a>
+        <a class="item game-hover-options ">
+          <div class="ui grid ">
+            <div class="eleven wide column ">
+              <h4 class="ui medium header ">Bumblebee Simulator</h4>
+              <p>Last played: &nbsp &nbsp --</p>
+            </div>
+            <div class="five wide column middle aligned content game-hover-options-hidden ">
+              <button class="ui icon right floated button "><i class="icon settings "></i></button>
+              <button class="ui icon positive right floated button "><i class="play circle outline icon "></i></button>
+            </div>
+          </div>
+        </a>
+        <a class="item game-hover-options ">
+          <div class="ui grid ">
+            <div class="eleven wide column ">
+              <h4 class="ui medium header ">Captain Smasher</h4>
+              <p>Last played: &nbsp &nbsp --</p>
+            </div>
+            <div class="five wide column middle aligned content game-hover-options-hidden ">
+              <button class="ui icon right floated button "><i class="icon settings "></i></button>
+              <button class="ui icon positive right floated button "><i class="play circle outline icon "></i></button>
+            </div>
+          </div>
+        </a>
+        <a class="item game-hover-options ">
+          <div class="ui grid ">
+            <div class="eleven wide column ">
+              <h4 class="ui medium header ">Rogue Assassin VII</h4>
+              <p>Last played: &nbsp &nbsp --</p>
+            </div>
+            <div class="five wide column middle aligned content game-hover-options-hidden ">
+              <button class="ui icon right floated button "><i class="icon settings "></i></button>
+              <button class="ui icon positive right floated button "><i class="play circle outline icon "></i></button>
+            </div>
+          </div>
+        </a>
+        <a class="item game-hover-options ">
+          <div class="ui grid ">
+            <div class="eleven wide column ">
+              <h4 class="ui medium header ">Draw Your Weapon!</h4>
+              <p>Last played: &nbsp &nbsp --</p>
+            </div>
+            <div class="five wide column middle aligned content game-hover-options-hidden ">
+              <button class="ui icon right floated button "><i class="icon settings "></i></button>
+              <button class="ui icon positive right floated button "><i class="play circle outline icon "></i></button>
+            </div>
+          </div>
+        </a>
+        <a class="item game-hover-options ">
+          <div class="ui grid ">
+            <div class="eleven wide column ">
+              <h4 class="ui medium header ">Comet Exploder</h4>
+              <p>Last played: &nbsp &nbsp --</p>
+            </div>
+            <div class="five wide column middle aligned content game-hover-options-hidden ">
+              <button class="ui icon right floated button "><i class="icon settings "></i></button>
+              <button class="ui icon positive right floated button "><i class="play circle outline icon "></i></button>
+            </div>
+          </div>
+        </a>
+        <a class="item game-hover-options ">
+          <div class="ui grid ">
+            <div class="eleven wide column ">
+              <h4 class="ui medium header ">Minesweeper: The Big One</h4>
+              <p>Last played: &nbsp &nbsp --</p>
+            </div>
+            <div class="five wide column middle aligned content game-hover-options-hidden ">
+              <button class="ui icon right floated button "><i class="icon settings "></i></button>
+              <button class="ui icon positive right floated button "><i class="play circle outline icon "></i></button>
+            </div>
+          </div>
+        </a>
+        <a class="item game-hover-options ">
+            <div class="ui grid ">
+              <div class="eleven wide column ">
+                <h4 class="ui medium header ">Chopper Rescue 1</h4>
+                <p>Last played: &nbsp &nbsp --</p>
+              </div>
+              <div class="five wide column middle aligned content game-hover-options-hidden ">
+                <button class="ui icon right floated button "><i class="icon settings "></i></button>
+                <button class="ui icon positive right floated button "><i class="play circle outline icon "></i></button>
+              </div>
+            </div>
+          </a>
+          <a class="item game-hover-options ">
+              <div class="ui grid ">
+                <div class="eleven wide column ">
+                  <h4 class="ui medium header ">Chopper Rescue 2</h4>
+                  <p>Last played: &nbsp &nbsp --</p>
+                </div>
+                <div class="five wide column middle aligned content game-hover-options-hidden ">
+                  <button class="ui icon right floated button "><i class="icon settings "></i></button>
+                  <button class="ui icon positive right floated button "><i class="play circle outline icon "></i></button>
+                </div>
+              </div>
+            </a>
+      </div>
     </div>
-  </div>
+</div>
 
 </body>
 
