@@ -1,0 +1,22 @@
+/*set up hover effects for game list entries*/
+.game-hover-options-hidden {
+  opacity: 0;
+}
+
+.game-hover-options:hover .game-hover-options-hidden {
+  opacity: 1;
+  transition: all 1s ease;
+}
+
+/*semantic-ui overrides*/
+.ui.menu.fixed .item {
+  width: 100%;
+}
+
+.ui.input>input {
+  border-radius: 0;
+}
+
+.ui.menu {
+  border-radius: 0;
+}
