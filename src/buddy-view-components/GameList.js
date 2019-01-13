@@ -3,7 +3,7 @@ import { Grid, Menu } from 'semantic-ui-react';
 
 import GameListEntry from './GameListEntry';
 
-const library = require('./data/library.json');
+const library = require('../data/library.json');
 const gameList = library.games;
 
 const gameListEntries = gameList.map((game, i) =>
