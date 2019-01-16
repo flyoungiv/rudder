@@ -5,6 +5,7 @@
   "dependencies": {
     "concurrently": "^4.1.0",
     "electron": "^4.0.1",
+    "foreman": "^3.0.1",
     "fs-jetpack": "^2.2.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
@@ -13,12 +14,13 @@
   },
   "main": "src/electron-starter.js",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "nf start -p 3000",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "electron": "electron .",
-    "dev": "concurrently --kill-others \"npm start\" \"npm run electron\""
+    "electron-start": "node src/electron-wait-react",
+    "react-start": "react-scripts start"
   },
   "eslintConfig": {
     "extends": "react-app"
