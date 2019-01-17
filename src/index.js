@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './stylesheets/buddy-view.css'
-import './stylesheets/semantic-ui-css/semantic.min.css';
+import './stylesheets/buddy-view.css';
+import 'semantic-ui-css/semantic.min.css';
 import BuddyView from './buddy-view-components/BuddyView';
 import * as serviceWorker from './serviceWorker';
 
