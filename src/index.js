@@ -1,13 +1,16 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import './stylesheets/buddy-view.css'
-import './stylesheets/semantic-ui-css/semantic.min.css';
+import { render, createPortal } from 'react-dom';
+//import App from './components/App';
 import BuddyView from './buddy-view-components/BuddyView';
-import * as serviceWorker from './serviceWorker';
+import ConfigModal from './buddy-view-components/ConfigModal';
+import './assets/semantic-ui-css/semantic.min.css';
+import './assets/buddy-view.css';
 
-ReactDOM.render(<BuddyView />, document.getElementById('root'));
+// Since we are using HtmlWebpackPlugin WITHOUT a template, we should create our own root node in the body element before rendering into it
+let root = document.createElement('div');
+root.id = "app-root";
+document.body.appendChild( root );
 
-// If you want your app to work offline and load faster, you can change
-// unregister() to register() below. Note this comes with some pitfalls.
-// Learn more about service workers: http://bit.ly/CRA-PWA
-serviceWorker.unregister();
+// Now we can render our application into it
+render( <BuddyView />, document.getElementById('app-root') );
+//createPortal( <ConfigModal />, document.getElementById('modal-root') );

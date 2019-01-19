@@ -1,6 +1,7 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react';
-import { startChildApp } from '../utilities/startChildApp';
+import startChildApp from '../utilities/startChildApp';
+import ConfigModal from './ConfigModal';
 
 const logClick = (property) => {
     console.log(property);
@@ -19,7 +20,7 @@ class LaunchGameButton extends React.Component {
     }
 }
 
-const ConfigGameButton = () => <Button icon='settings' />;
+const ConfigGameButton = () => <ConfigModal />;
 
 export { LaunchGameButton, ConfigGameButton };
 

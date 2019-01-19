@@ -1,0 +1,83 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="semantic-ui/semantic.min.js"></script>
+  <script>$(document).ready(() => $('.ui.modal').modal('show'))</script>
+  <style>
+
+    .ui.modal > h4 {
+    border-top: 1px solid rgba(34,36,38,.15);
+    border-bottom: none !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .ui.modal .content > .image {
+    margin: 0 !important;
+  }
+  </style>
+</head>
+
+<body>
+  <div class="ui modal">
+    <i class="close icon"></i>
+    <h2 class="ui header">
+      <i class="settings icon"></i>
+      <div class="content">
+        Game Settings
+        <div class="sub header">Manage preferences for this game</div>
+      </div>
+    </h2>
+    <div class="scrolling content">
+      <h4 class="ui header">Couch Mode</h4>
+      <div class="ui toggle checkbox">
+        <input type="checkbox" name="public">
+        <label>Show game in Couch Mode</label>
+      </div>
+      <h4 class="ui header">Game Executable</h4>
+      <div class="ui fluid action input">
+          <input type="text" placeholder="E:\Games\steam\steamapps\common\rockbreaker\rock-breaker.exe">
+          <button class="ui icon button">
+            <i class="folder open outline icon"></i>
+          </button>
+        </div>
+      <br />
+      <div class="ui right labeled fluid input">
+        <input type="text" placeholder="(Optional)">
+        <div class="ui label">
+          Arguments
+        </div>
+      </div>
+      <h4 class="ui header">
+        <h4 class="ui header">Cover Art</h4>
+        <div class="ui buttons">
+            <button class="ui button">Browse Computer</button>
+            <div class="or"></div>
+            <button class="ui primary button">Get Automatically</button>
+          </div>
+          <br /><br />
+        <img class="ui small image" src="./img/clr.jpg">
+        <h4 class="ui header">Delete Game from Library</h4>
+        <P>Type DELETE below and then click the trash can to remove this game from your library. This will not delete
+          the game from your computer.</P>
+        <div class="ui action input">
+          <input type="text" placeholder="DELETE">
+          <button class="ui icon negative button">
+            <i class="trash alternate outline icon"></i>
+          </button>
+        </div>
+    </div>
+    <div class="actions">
+      <div class="ui black deny button">
+        Nevermind
+      </div>
+      <div class="ui positive right labeled icon button">
+        Save
+        <i class="checkmark icon"></i>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
