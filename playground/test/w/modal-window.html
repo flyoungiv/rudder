@@ -1,0 +1,105 @@
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="semantic-ui/semantic.min.css">
+  <script src="jquery-3.3.1.min.js"></script>
+  <script src="semantic-ui/semantic.min.js"></script>
+  <script>$(document).ready(() => $('.ui.modal').modal('show'))</script>
+  <style>
+
+    .ui.modal > h4 {
+    border-top: 1px solid rgba(34,36,38,.15);
+    border-bottom: none !important;
+    margin-top: 1.5rem !important;
+  }
+
+  .ui.modal .content > .image {
+    margin: 0 !important;
+  }
+  </style>
+</head>
+
+<body>
+
+      <div class="ui segment">
+      <h2 class="ui header">
+        <i class="settings icon"></i>
+        <div class="content">
+          Game Settings
+          <div class="sub header">Manage preferences for this game</div>
+        </div>
+      </h2>
+      <div class="ui divider"></div>
+      <!-- <div class="content"> -->
+        <h4 class="ui header">COUCH MODE</h4>
+        <div class="ui secondary segment">
+
+          <div class="ui toggle checkbox">
+            <input type="checkbox" name="public">
+            <label>Show game in Couch Mode</label>
+          </div>
+        </div>
+        <h4 class="ui header">COVER ART</h4>
+        <div class="ui secondary segment">
+          <div class="ui two column center aligned grid">
+            <div class="middle aligned row">
+              <div class="left aligned column">
+                <img class="ui small image" src="./img/clr.jpg">
+              </div>
+              <div class="right aligned column">
+                  <button class="ui labeled icon button">
+                      <i class="folder outline icon"></i>
+                      Browse Computer
+                    </button>
+                <div class="ui divider hidden"></div>
+                <button class="ui labeled icon primary button">
+                    <i class="cloud download icon"></i>
+                    Get Automatically
+                  </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <h4 class="ui header">GAME EXECUTABLE</h4>
+        <div class="ui secondary segment">
+
+          <div class="ui fluid action input">
+            <input type="text" placeholder="E:\Games\steam\steamapps\common\rockbreaker\rock-breaker.exe">
+            <button class="ui icon button">
+              <i class="folder open outline icon"></i>
+            </button>
+          </div>
+          <div class="ui divider hidden"></div>
+          <div class="ui labeled fluid input">
+            <div class="ui label">
+              Arguments
+            </div>
+            <input type="text" placeholder="(Optional)">
+          </div>
+        </div>
+        <h4 class="ui header">DELETE GAME FROM LIBRARY</h4>
+        <div class="ui secondary segment">
+          <P>Type DELETE below and then click the trash can to remove this game from your library. This will not delete
+            the game from your computer.</P>
+          <div class="ui action input">
+            <input type="text" placeholder="DELETE">
+            <button class="ui icon negative button">
+              <i class="trash alternate outline icon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <div class="actions">
+        <div class="ui black deny button">
+          Nevermind
+        </div>
+        <div class="ui positive right labeled icon button">
+          Save
+          <i class="checkmark icon"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>

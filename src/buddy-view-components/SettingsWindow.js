@@ -2,7 +2,7 @@ import React from "react";
 import { Button, Header, Icon, Image, Modal, Checkbox, Input, Divider } from "semantic-ui-react";
 const img = './assets/img/clr.jpg';
 
-export default class ConfigModal extends React.Component {
+export default class SettingsWindow extends React.Component {
     constructor(props) {
         super(props);
         this.state = { open: false };
@@ -14,10 +14,7 @@ export default class ConfigModal extends React.Component {
     }
 
     render() {
-        return (
-            <Modal
-                trigger={<Button icon='settings' />}
-            >
+        return (<div>
                 <Header as='h2'>
                     <Icon name='settings' />
                     <Header.Content>
@@ -25,8 +22,6 @@ export default class ConfigModal extends React.Component {
                         <Header.Subheader>Manage preferences for this game</Header.Subheader>
                     </Header.Content>
                 </Header>
-                <Modal.Content className="scrolling">
-                    <Modal.Description>
                         <Header as='h4'>Couch Mode</Header>
                         <Checkbox toggle label={<label>Show game in Couch Mode</label>} />
                         <Header as='h4'>Game Executable</Header>
@@ -45,13 +40,9 @@ export default class ConfigModal extends React.Component {
                         <p>Type DELETE below and then click the trash can to remove this game from your library. This will not delete
                             the game from your computer.</p>
                         <Input action={{ icon: 'trash alternate outline', color: 'red' }} placeholder='DELETE' />
-                    </Modal.Description>
-                </Modal.Content>
-                <Modal.Actions>
                     <Button className="black deny">Nevermind</Button>
                     <Button positive content='Save' icon='checkmark' labelPosition='right' />
-                </Modal.Actions>
-            </Modal>
+                    </div>
         );
     }
 }

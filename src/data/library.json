@@ -2,6 +2,60 @@
   "games": [
     {
       "id": 60530,
+      "game_title": "Window Cleaner Ultimate",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "id": 60530,
+      "game_title": "Zoo Keeper 3",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "id": 60530,
+      "game_title": "Bumblebee Simulator",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "id": 60530,
+      "game_title": "Captain Smasher",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "id": 60530,
+      "game_title": "Rogue Assassin VII",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "id": 60530,
+      "game_title": "Draw Your Weapon!",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "id": 60530,
+      "game_title": "Comet Exploder",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "id": 60530,
+      "game_title": "Minesweeper: The Big One",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "id": 60530,
+      "game_title": "Chopper Rescue 1",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "id": 60530,
       "game_title": "Overwatch",
       "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
       "cover_art": "Overwatch-285x380.jpg"

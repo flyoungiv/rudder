@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Rudder</title>
+    <script>if (typeof module === 'object') {window.module = module; module = undefined;}</script><!-- Fixes issue of jQuery not loading  https://stackoverflow.com/users/3097649/dale-harders-->
+    <script src="assets/jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="assets/semantic-ui-css/semantic.min.css" />
+    <link rel="stylesheet" href="assets/buddy-view.css" />
+    <script>if (window.module) module = window.module;</script>
+    <!--  -->
+  </head>
+  <body>
+    <div id="root"></div>
+    <button id="button-1">start child app</button>
+    <button id="button-2">open new window</button>
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+    </script>
+    <script src="startChildApp.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

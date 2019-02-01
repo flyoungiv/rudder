@@ -1,13 +1,12 @@
 import React from 'react';
-import { Grid, Menu } from 'semantic-ui-react';
-
+import { List, Segment } from 'semantic-ui-react';
 import GameListEntry from './GameListEntry';
 
 const library = require('../data/library.json');
 const gameList = library.games;
 
 const gameListEntries = gameList.map((game, i) =>
-    <Menu.Item
+    <List.Item
         key={`game-${i}`}
         className="game-hover-options">
         <GameListEntry
@@ -15,15 +14,20 @@ const gameListEntries = gameList.map((game, i) =>
             subText="Last played:  --"
             gamePath={game.shortcut}
         />
-    </Menu.Item>
+    </List.Item>
 );
 
 const GameList = () => (
-    <Grid>
-        <Grid.Column>
-            <Menu vertical fluid>{gameListEntries}</Menu>
-        </Grid.Column>
-    </Grid>
+    <Segment id="game-list">
+        <List
+            relaxed
+            divided
+            verticalAlign="middle"
+            size="small"
+        >
+            {gameListEntries}
+        </List>
+    </Segment>
 );
 
 export default GameList;
