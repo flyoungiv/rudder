@@ -3,7 +3,7 @@ import { Segment, Button, Grid, Header, Icon, Image, Checkbox, Input, Divider } 
 import { ipcRenderer, platform } from 'electron';
 import saveCoverArt from '../utilities/saveCoverArt';
 
-const img = './assets/img/clr.jpg';
+//const img  './assets/img/clr.jpg';
 
 export default class GameConfigWindow extends React.Component {
     componentDidMount () {
@@ -11,17 +11,18 @@ export default class GameConfigWindow extends React.Component {
         //set up file dialog listener for choosing a new cover art from user's computer
         ipcRenderer.on('selected-directory', (event, path) => {
             const fileExtension = path[0].split('.').pop();
-            saveCoverArt.save(path[0], this.props.gameName, fileExtension);
+            saveCoverArt.save(path[0], this.props.game.game_title, fileExtension);
             });
     }
 
     render() {
+        const { game } = this.props;
         return (
             <Segment>
                 <Header as='h3'>
                     <Icon name='settings' />
                     <Header.Content>
-                        {this.props.gameName}
+                        {game.game_title}
                         <Header.Subheader>Manage preferences for this game</Header.Subheader>
                     </Header.Content>
                 </Header>
@@ -31,7 +32,7 @@ export default class GameConfigWindow extends React.Component {
                     <Grid columns={2}>
                         <Grid.Row verticalAlign="middle">
                             <Grid.Column textAlign="left">
-                                <Image size="small" src={img} />
+                                <Image size="small" src={`./assets/img/cover_art/${game.cover_art}`} />
                             </Grid.Column>
                             <Grid.Column textAlign="right">
                                 <Button
@@ -56,7 +57,7 @@ export default class GameConfigWindow extends React.Component {
                 </Segment>
                 <Header as='h4'>GAME EXECUTABLE</Header>
                 <Segment secondary>
-                    <Input fluid action={{ icon: 'folder open outline' }} value={this.props.gamePath} />
+                    <Input fluid action={{ icon: 'folder open outline' }} value={game.shortcut} />
                     <Divider hidden />
                     <Input fluid label='Arguments' placeholder='(Optional)' />
                 </Segment>

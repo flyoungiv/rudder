@@ -6,7 +6,7 @@ import GameConfigWindow from './buddy-view-components/GameConfigWindow';
 ipc.on('message', (event, message) => {
     console.log(message); // logs out "Hello second window!"
     render(
-        <GameConfigWindow gameName={message.gameName} gamePath={message.gamePath}/>,
+        <GameConfigWindow game={message} />,
         document.getElementById('root')
         );
 })

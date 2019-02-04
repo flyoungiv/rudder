@@ -6,19 +6,20 @@ import { LaunchGameButton, ConfigGameButton } from './ButtonsLaunchConfig';
 
 export default class GameListEntry extends React.Component {
     render() {
+        const { game } = this.props;
+
         return (
             <Fragment>
                 <List.Content
                     floated="right"
                     className="middle aligned content game-hover-options-hidden">
                     <LaunchGameButton
-                        gamePath={this.props.gamePath} />
+                        game={game} />
                     <ConfigGameButton
-                        gamePath={this.props.gamePath}
-                        gameName={this.props.gameName} />
+                        game={game} />
                 </List.Content>
                 <List.Content>
-                    <GameName gameName={this.props.gameName} />
+                    <GameName gameName={game.game_title} />
                     <GameSubText subText={this.props.subText} />
                 </List.Content>
             </Fragment>

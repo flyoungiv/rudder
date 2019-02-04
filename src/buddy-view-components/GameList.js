@@ -10,9 +10,8 @@ const gameListEntries = gameList.map((game, i) =>
         key={`game-${i}`}
         className="game-hover-options">
         <GameListEntry
-            gameName={game.game_title}
+            game={game}
             subText="Last played:  --"
-            gamePath={game.shortcut}
         />
     </List.Item>
 );
