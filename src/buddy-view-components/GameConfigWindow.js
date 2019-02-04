@@ -1,16 +1,18 @@
 import React from "react";
 import { Segment, Button, Grid, Header, Icon, Image, Checkbox, Input, Divider } from "semantic-ui-react";
+import { ipcRenderer, platform } from 'electron';
+import saveCoverArt from '../utilities/saveCoverArt';
+
 const img = './assets/img/clr.jpg';
 
 export default class GameConfigWindow extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = { open: false };
-        this.closeModal = this.closeModal.bind(this);
-    }
+    componentDidMount () {
 
-    closeModal() {
-        this.state.open = false;
+        //set up file dialog listener for choosing a new cover art from user's computer
+        ipcRenderer.on('selected-directory', (event, path) => {
+            const fileExtension = path[0].split('.').pop();
+            saveCoverArt.save(path[0], this.props.gameName, fileExtension);
+            });
     }
 
     render() {
@@ -32,9 +34,12 @@ export default class GameConfigWindow extends React.Component {
                                 <Image size="small" src={img} />
                             </Grid.Column>
                             <Grid.Column textAlign="right">
-                                <Button icon labelPosition='left'>
+                                <Button
+                                    icon
+                                    labelPosition='left'
+                                    onClick={ () => ipcRenderer.send('open-file-dialog') }>
                                     <Icon name='folder outline' />
-                                    Browser Computer
+                                    Browse Computer
                                 </Button>
                                 <Divider hidden />
                                 <Button primary icon labelPosition='left'>
@@ -65,33 +70,3 @@ export default class GameConfigWindow extends React.Component {
         );
     }
 }
-
-{/* <div>
-                <Header as='h2'>
-                    <Icon name='settings' />
-                    <Header.Content>
-                        {this.props.gameName}
-                        <Header.Subheader>Manage preferences for this game</Header.Subheader>
-                    </Header.Content>
-                </Header>
-                        <Header as='h4'>Couch Mode</Header>
-                        <Checkbox toggle label={<label>Show game in Couch Mode</label>} />
-                        <Header as='h4'>Game Executable</Header>
-                        <Input fluid action={{ icon: 'folder open outline' }} value={this.props.gamePath} />
-                        <br />
-                        <Input fluid label='Arguments' placeholder='(Optional)' />
-                        <Header as='h4'>Cover Art</Header>
-                        <Button.Group>
-                            <Button>Browse Computer</Button>
-                            <Button.Or />
-                            <Button primary>Get Automatically</Button>
-                        </Button.Group>
-                        <Divider hidden />
-                        <Image src={img} size='small' />
-                        <Header as='h4'>Delete Game from Library</Header>
-                        <p>Type DELETE below and then click the trash can to remove this game from your library. This will not delete
-                            the game from your computer.</p>
-                        <Input action={{ icon: 'trash alternate outline', color: 'red' }} placeholder='DELETE' />
-                    <Button className="black deny">Nevermind</Button>
-                    <Button positive content='Save' icon='checkmark' labelPosition='right' />
-                    </div> */}
