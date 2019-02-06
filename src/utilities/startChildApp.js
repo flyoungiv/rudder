@@ -1,4 +1,4 @@
-//from https://ourcodeworld.com/articles/read/154/how-to-execute-an-exe-file-system-application-using-electron-framework
+//modified from https://ourcodeworld.com/articles/read/154/how-to-execute-an-exe-file-system-application-using-electron-framework
 import { execFile } from 'child_process';
 let parameters;
 

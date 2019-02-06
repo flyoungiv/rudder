@@ -1,12 +1,22 @@
 To-Do Items for Rudder Project
 ==============================
+
+*  re-work the logic to refresh the game config window and props when something changes
+*  need to also manage state/refresh buddy view window whenever library.json is updated
+*  set a default cover art when none is found
+*  add loading transitions when searching for cover art
+*  add some transitions/effects to make the app feel more lifelike
+*  ellipses when game name is too long
+*  try using path node module to avoid unix/windows complications
+	*  should relative paths be used in import statements?
+
 *  other
-	*  create a mock-up of the UI windowed mode (for editing library, etc)
+	*  ~~create a mock-up of the UI windowed mode (for editing library, etc)~~
 	*  ~~set default cover art when image could not be found~~
 	*  ~~create folder in cover art folder for storing new image~~
-	*  figure out how to choose relative path correctly in AddNewGame.js and GridLayout.js
+	*  ~~figure out how to choose relative path correctly in AddNewGame.js and GridLayout.js~~
 	*  ~~set hover attributes (pointer cursor) for cover arts and path pickers~~
-	*  add error handling/input validation to add new game function
+	*  ~~add error handling/input validation to add new game function~~
 	*  ~~move user selected image to cover_art folder~~
 	*  ~~add ability to delete game~~
 	*  ~~currently if no image is selected then jetpack will try to copy the entire root folder to the image folder~~

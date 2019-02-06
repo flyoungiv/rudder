@@ -2,6 +2,7 @@ import React from "react";
 import { Segment, Button, Grid, Header, Icon, Image, Checkbox, Input, Divider } from "semantic-ui-react";
 import { ipcRenderer, platform } from 'electron';
 import saveCoverArt from '../utilities/saveCoverArt';
+import refreshGameConfigWindow from '../utilities/refreshGameConfigWindow';
 
 //const img  './assets/img/clr.jpg';
 
@@ -11,7 +12,11 @@ export default class GameConfigWindow extends React.Component {
         //set up file dialog listener for choosing a new cover art from user's computer
         ipcRenderer.on('selected-directory', (event, path) => {
             const fileExtension = path[0].split('.').pop();
-            saveCoverArt.save(path[0], this.props.game.game_title, fileExtension);
+            const updatedGameObject = saveCoverArt.save(path[0], this.props.game.game_title, fileExtension);
+            refreshGameConfigWindow(updatedGameObject);
+            //THIS IS A HACK.
+            //THIS WHOLE FUNCTION SHOULD BE RE-WORKED TO
+            //REFRESH THE WINDOW FOLLOWING THE REACT LIFECYCLE
             });
     }
 

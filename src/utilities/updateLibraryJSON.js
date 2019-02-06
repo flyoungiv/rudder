@@ -1,4 +1,5 @@
 import library from '../data/library.json';
+import jetpack from 'fs-jetpack';
 
 const updateLibraryJSON = (gameName, gameObject) => {
     const index = library.games.findIndex( game => game.game_title === gameName );
@@ -11,6 +12,7 @@ const updateLibraryJSON = (gameName, gameObject) => {
     }
     library.games.splice(index, 1, updatedGameObject);
     jetpack.write('./src/data/library.json', library);
+    return updatedGameObject;
 };
 
 export default updateLibraryJSON;

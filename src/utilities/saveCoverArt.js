@@ -12,7 +12,7 @@ const saveCoverArt = {
             return;
         }
         if (this.checkPathType(path) === 'path') {
-            this.savePath(path, gameName, fileExtension);
+            return this.savePath(path, gameName, fileExtension);
         }
         
 
@@ -32,8 +32,9 @@ const saveCoverArt = {
             const newPath = `./src/assets/img/cover_art/${newFileName}`;
             jetpack.copy(path, newPath, {overwrite: true});
             console.log(`copied ${path} to ${newPath}`);
-            updateLibraryJSON(gameName, {cover_art: newFileName});
+            const updatedGameObject = updateLibraryJSON(gameName, {cover_art: newFileName});
             console.log('updated library.json');
+            return updatedGameObject;
         }
     }
 }

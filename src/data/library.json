@@ -4,13 +4,13 @@
       "id": 60530,
       "game_title": "Window Cleaner Ultimate",
       "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
-      "cover_art": "Window Cleaner Ultimate.png"
+      "cover_art": "Window Cleaner Ultimate.jpg"
     },
     {
       "id": 60530,
       "game_title": "Zoo Keeper 3",
       "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
-      "cover_art": "./src/assets/img/cover_art/Zoo Keeper 3.jpg"
+      "cover_art": "Zoo Keeper 3.png"
     },
     {
       "id": 60530,
@@ -64,43 +64,43 @@
       "id": 1,
       "game_title": "Star Wars Battlefront II",
       "shortcut": "D:\\Games\\Origin\\STAR WARS Battlefront II\\starwarsbattlefrontii.exe",
-      "cover_art": "2932265-sw_2017-apr-15.jpg"
+      "cover_art": "Star Wars Battlefront II.jpg"
     },
     {
       "id": 1,
       "game_title": "Rocket League",
       "shortcut": "D:\\Games\\Steam\\steamapps\\common\\rocketleague\\Binaries\\Win32\\RocketLeague.exe",
-      "cover_art": "2949245-box_rleague.png"
+      "cover_art": "Rocket League.png"
     },
     {
       "id": 1,
       "game_title": "Portal",
       "shortcut": "D:\\Games\\Steam\\steamapps\\common\\Portal\\hl2.exe",
-      "cover_art": "2525229-box_portal.png"
+      "cover_art": "Portal.png"
     },
     {
       "id": 1,
       "game_title": "The Witcher 3 Wild Hunt",
       "shortcut": "../src/test/launch_game.cmd",
-      "cover_art": "The Witcher 3_ Wild Hunt-285x380.jpg"
+      "cover_art": "The Witcher 3 Wild Hunt.jpg"
     },
     {
       "id": 1,
       "game_title": "Ori and the Blind Forest",
       "shortcut": "D:\\Games\\Steam\\steamapps\\common\\Ori\\ori.exe",
-      "cover_art": "ori.jpg"
+      "cover_art": "Ori and the Blind Forest.jpg"
     },
     {
       "id": 1,
       "game_title": "The Force Unleashed",
       "shortcut": "D:\\Games\\Steam\\steamapps\\common\\Star Wars The Force Unleashed\\SWTFU Launcher.exe",
-      "cover_art": "2761846-tfu_cover_art.jpg"
+      "cover_art": "The Force Unleashed.jpg"
     },
     {
       "id": 1,
       "game_title": "Half-Life 2",
       "shortcut": "D:\\Games\\Steam\\steamapps\\common\\Half-Life 2\\hl2.exe",
-      "cover_art": "625502-hl2box.jpg"
+      "cover_art": "Half-Life 2.jpg"
     },
     {
       "id": 1,
