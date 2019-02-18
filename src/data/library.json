@@ -56,6 +56,12 @@
     },
     {
       "id": 60530,
+      "game_title": "Chopper Rescue 2",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "id": 60530,
       "game_title": "Overwatch",
       "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
       "cover_art": "Overwatch-285x380.jpg"

@@ -1,0 +1,212 @@
+<html>
+
+<head>
+    <title>Rudder</title>
+    <script src="jquery-3.3.1.min.js"></script>
+    <link rel="stylesheet" href="semantic-ui/semantic.min.css">
+    <link rel="stylesheet" href="buddy-view.css">
+</head>
+
+<body>
+    <div id="root">
+        <div>
+                <div class="ui fluid icon input">
+                        <input type="text" placeholder="Search a very wide input...">
+                        <i class="search icon"></i>
+                      </div>
+<!--             <div class="ui top fixed menu">
+                <div class="item">
+                    <div class="ui icon input large transparent left icon"><input
+                            placeholder="Start typing to filter games..." type="text" value=""><i aria-hidden="true"
+                            class="gamepad icon"></i></div>
+                </div>
+            </div> -->
+            <div id="game-list" class="ui segment">
+                <div role="list" class="ui small divided relaxed middle aligned list">
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Window Cleaner Ultimate</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Zoo Keeper 3</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Bumblebee Simulator</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Captain Smasher</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Rogue Assassin VII</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Draw Your Weapon!</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Comet Exploder</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Minesweeper: The Big One</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Chopper Rescue 1</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Overwatch</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Star Wars Battlefront II</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Rocket League</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Portal</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">The Witcher 3 Wild Hunt</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Ori and the Blind Forest</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">The Force Unleashed</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Half-Life 2</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                    <div role="listitem" class="item game-hover-options">
+                        <div class="right floated content middle aligned content game-hover-options-hidden"><button
+                                class="ui icon positive button"><i aria-hidden="true"
+                                    class="play circle outline icon"></i></button><button class="ui icon button"><i
+                                    aria-hidden="true" class="settings icon"></i></button></div>
+                        <div class="content">
+                            <div class="ui medium header">Bioshock Infinite</div>
+                            <p>Last played: --</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
