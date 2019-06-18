@@ -19,6 +19,8 @@ const openSettingsWindow = gameId => {
   gameConfigWindow.setMenu(null);
   gameConfigWindow.webContents.openDevTools()
   gameConfigWindow.show();
+
+  console.log(remote.BrowserWindow.getAllWindows())
 }
 
 export default openSettingsWindow;

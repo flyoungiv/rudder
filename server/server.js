@@ -16,9 +16,10 @@ app.use(express.json()) //can't read request body without this
 
 
 //allow CORS
-app.use(function(req, res, next) {
+app.use(function (req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
   next();
 });
 
@@ -45,29 +46,29 @@ app.post('/games', (req, res) => {
 
   const message =
   {
-    error: 'POST requests should have the below three properties. Title is required.',
-    title: 'string',
+    error: 'POST requests should have the below properties (title is required)',
+    title: 'string (required)',
     path: 'string',
-    cover_art: 'string'
+    cover_art: 'string',
+    rudder_id: 'string (system-generated, pass in a value to override)'
   }
 
   if (!req.body.title) {
+    console.log(req.body.title)
     res.status(400).json(message)
   }
   else {
-    const newGame = {
-      rudder_id: shortid.generate(),
+    const game = {
+      rudder_id: !req.body.rudder_id ? shortid.generate() : req.body.rudder_id,
       game_title: req.body.title,
       shortcut: req.body.path,
       cover_art: req.body.cover_art
     }
 
-
     db.get('games')
-      .push(newGame)
+      .push(game)
       .write()
-    res.status(201).json(newGame)
-      //res.status(201).json(`Added "${req.body.title}" to game library.`)
+    res.status(201).json(game)
   }
 })
 
@@ -77,10 +78,10 @@ app.post('/games', (req, res) => {
 
 app.put('/games/:id', (req, res) => {
   db.get('games')
-    .find({rudder_id: req.params.id})
-    .assign({game_title: req.body.title, shortcut: req.body.path, cover_art: req.body.cover_art})
+    .find({ rudder_id: req.params.id })
+    .assign({ game_title: req.body.title, shortcut: req.body.path, cover_art: req.body.cover_art })
     .write()
-    res.status(200).json(`Updated game ${req.params.id} to be named "${req.body.title}"`)
+  res.status(200).json(`Updated game ${req.params.id} to be named "${req.body.title}"`)
 })
 
 //====================================
@@ -88,10 +89,22 @@ app.put('/games/:id', (req, res) => {
 //====================================
 
 app.delete('/games/:id', (req, res) => {
+
+  const game =
+    db.get('games')
+      .find({ rudder_id: req.params.id })
+      .value()
+
+  if (!game) {
+    res.status(404).json(`Bummer... No game found with rudder_id: ${req.params.id}`)  
+  }
+  
   db.get('games')
-    .remove({rudder_id: req.params.id})
+    .remove({ rudder_id: req.params.id })
     .write()
-    res.status(200).json(`Deleted game ${req.params.id} from library`)
+
+  game.message = 'Game has been deleted from library. RIP.'
+  res.status(200).json(game)
 })
 
 
