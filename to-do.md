@@ -9,6 +9,7 @@ To-Do Items for Rudder Project
 *  ellipses when game name is too long
 *  try using path node module to avoid unix/windows complications
 	*  should relative paths be used in import statements?
+* ~~bad-ass search bar~~
 
 *  other
 	*  ~~create a mock-up of the UI windowed mode (for editing library, etc)~~

@@ -1,0 +1,137 @@
+{
+  "games": [
+    {
+      "rudder_id": "t0sQi-JdN",
+      "game_title": "Window Cleaner Ultimate",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Window Cleaner Ultimate.jpg"
+    },
+    {
+      "rudder_id": "VwSf95kYMo",
+      "game_title": "Zoo Keeper 3",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Zoo Keeper 3.png"
+    },
+    {
+      "rudder_id": "ogpZv3Q0Ks",
+      "game_title": "Bumblebee Simulator",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Bumblebee Simulator.jpg"
+    },
+    {
+      "rudder_id": "Vxy-Neztqx",
+      "game_title": "Captain Smasher",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Captain Smasher.jpg"
+    },
+    {
+      "rudder_id": "5PC-NkfZIz",
+      "game_title": "Rogue Assassin VII",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Rogue Assassin VII.jpg"
+    },
+    {
+      "rudder_id": "f3bMPdfjtD",
+      "game_title": "Draw Your Weapon!",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "rudder_id": "dgUL4pFtAN",
+      "game_title": "Comet Exploder",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "rudder_id": "PTfbBD_dIu",
+      "game_title": "Minesweeper: The Big One",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Minesweeper: The Big One.png"
+    },
+    {
+      "rudder_id": "MgHoJBemQZ",
+      "game_title": "Chopper Rescue 1",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "rudder_id": "uwDjrnxMp2",
+      "game_title": "Chopper Rescue 2",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "rudder_id": "tmjgjduREW",
+      "game_title": "Overwatch",
+      "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
+      "cover_art": "Overwatch-285x380.jpg"
+    },
+    {
+      "rudder_id": "a94ub1wcdP",
+      "game_title": "Star Wars Battlefront II",
+      "shortcut": "D:\\Games\\Origin\\STAR WARS Battlefront II\\starwarsbattlefrontii.exe",
+      "cover_art": "Star Wars Battlefront II.jpg"
+    },
+    {
+      "rudder_id": "nnZgDZIjJW",
+      "game_title": "Rocket League",
+      "shortcut": "D:\\Games\\Steam\\steamapps\\common\\rocketleague\\Binaries\\Win32\\RocketLeague.exe",
+      "cover_art": "Rocket League.png"
+    },
+    {
+      "rudder_id": "_unXqjv9_9",
+      "game_title": "Portal",
+      "shortcut": "D:\\Games\\Steam\\steamapps\\common\\Portal\\hl2.exe",
+      "cover_art": "Portal.png"
+    },
+    {
+      "rudder_id": "bDgugaQiwb",
+      "game_title": "The Witcher 3 Wild Hunt",
+      "shortcut": "../src/test/launch_game.cmd",
+      "cover_art": "The Witcher 3 Wild Hunt.jpg"
+    },
+    {
+      "rudder_id": "yPWlCpbkbs",
+      "game_title": "Ori and the Blind Forest",
+      "shortcut": "D:\\Games\\Steam\\steamapps\\common\\Ori\\ori.exe",
+      "cover_art": "Ori and the Blind Forest.jpg"
+    },
+    {
+      "rudder_id": "t-2nHt4q3KJ",
+      "game_title": "The Force Unleashed",
+      "shortcut": "D:\\Games\\Steam\\steamapps\\common\\Star Wars The Force Unleashed\\SWTFU Launcher.exe",
+      "cover_art": "The Force Unleashed.jpg"
+    },
+    {
+      "rudder_id": "zWsgmT8OKWy",
+      "game_title": "Half-Life 2",
+      "shortcut": "D:\\Games\\Steam\\steamapps\\common\\Half-Life 2\\hl2.exe",
+      "cover_art": "Half-Life 2.jpg"
+    },
+    {
+      "rudder_id": "gl7L1V7PVWB",
+      "game_title": "Bioshock Infinite",
+      "shortcut": "D:\\Games\\Steam\\steamapps\\common\\BioShock Infinite\\Binaries\\Win32\\BioShockInfinite.exe",
+      "cover_art": "2379677-bioshockinfinite_boxart.jpg"
+    },
+    {
+      "rudder_id": "nqErEWcV6",
+      "game_title": "gay game",
+      "shortcut": "string",
+      "cover_art": "string"
+    },
+    {
+      "rudder_id": "ReNn0536M",
+      "game_title": "dumb game",
+      "shortcut": "string",
+      "cover_art": "string"
+    },
+    {
+      "rudder_id": "XGocA-qCy",
+      "game_title": "dumb game",
+      "shortcut": "string",
+      "cover_art": "string"
+    }
+  ],
+  "settings": {}
+}

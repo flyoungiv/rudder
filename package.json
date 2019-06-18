@@ -1,20 +1,22 @@
 {
-  "name": "Rudder",
+  "name": "rudder",
   "version": "1.0.0",
   "description": "",
   "main": "main.js",
   "dependencies": {
-    "electron-prebuilt-compile": "^4.0.0",
-    "fs-jetpack": "^2.2.1",
-    "jquery": "^3.3.1",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "semantic-ui-css": "^2.4.1",
-    "semantic-ui-react": "^0.84.0"
+    "express": "^4.17.1",
+    "lowdb": "^1.0.0",
+    "shortid": "^2.2.14"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "concurrently": "^4.1.0",
+    "wait-on": "^3.2.0"
+  },
   "scripts": {
-    "start": "electron .",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \"npm run client-react\" \"wait-on http://localhost:3000 && npm run client-electron\"",
+    "server": "cd server && node server.js",
+    "client-react": "cd client && npm run start",
+    "client-electron": "cd client && npm run electron",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
