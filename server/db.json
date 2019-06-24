@@ -4,7 +4,7 @@
       "rudder_id": "t0sQi-JdN",
       "game_title": "Window Cleaner Ultimate",
       "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
-      "cover_art": "Window Cleaner Ultimate.jpg"
+      "cover_art": "./public/img/cover_art/t0sQi-JdN.png"
     },
     {
       "rudder_id": "VwSf95kYMo",
@@ -16,19 +16,19 @@
       "rudder_id": "ogpZv3Q0Ks",
       "game_title": "Bumblebee Simulator",
       "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
-      "cover_art": "Bumblebee Simulator.jpg"
+      "cover_art": "./public/img/cover_art/ogpZv3Q0Ks.png"
     },
     {
       "rudder_id": "Vxy-Neztqx",
       "game_title": "Captain Smasher",
       "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
-      "cover_art": "Captain Smasher.jpg"
+      "cover_art": "./public/img/cover_art/Vxy-Neztqx.png"
     },
     {
       "rudder_id": "5PC-NkfZIz",
       "game_title": "Rogue Assassin VII",
       "shortcut": "C:\\Program Files (x86)\\Battle.net\\Battle.net Launcher.exe",
-      "cover_art": "Rogue Assassin VII.jpg"
+      "cover_art": "./public/img/cover_art/5PC-NkfZIz.png"
     },
     {
       "rudder_id": "f3bMPdfjtD",

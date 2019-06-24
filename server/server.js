@@ -77,11 +77,33 @@ app.post('/games', (req, res) => {
 //====================================
 
 app.put('/games/:id', (req, res) => {
-  db.get('games')
-    .find({ rudder_id: req.params.id })
-    .assign({ game_title: req.body.title, shortcut: req.body.path, cover_art: req.body.cover_art })
-    .write()
-  res.status(200).json(`Updated game ${req.params.id} to be named "${req.body.title}"`)
+
+  if (!req.body.title && !req.body.shortcut && !req.body.cover_art) {
+    
+    const message = {
+      error: 'PUT requests should probably include at least one field you want to update',
+      title: 'Updated Title',
+      shortcut: '/Updated/Shortcut.exe',
+      cover_art: '/Updated/Cover/Art.jpg'
+    }
+
+    res.status(400).json(message)
+
+  } else {
+
+    const game = {}
+
+    //avoid adding any of the below properties if they would NULL out an existing value
+    if (req.body.title) game.game_title = req.body.title
+    if (req.body.shortcut) game.shortcut = req.body.shortcut
+    if (req.body.cover_art) game.cover_art = req.body.cover_art
+
+    db.get('games')
+      .find({ rudder_id: req.params.id })
+      .assign(game)
+      .write()
+    res.status(200).json(game)
+  }
 })
 
 //====================================
@@ -96,9 +118,9 @@ app.delete('/games/:id', (req, res) => {
       .value()
 
   if (!game) {
-    res.status(404).json(`Bummer... No game found with rudder_id: ${req.params.id}`)  
+    res.status(404).json(`Bummer... No game found with rudder_id: ${req.params.id}`)
   }
-  
+
   db.get('games')
     .remove({ rudder_id: req.params.id })
     .write()
@@ -111,4 +133,4 @@ app.delete('/games/:id', (req, res) => {
 //====================================
 //Start App
 //====================================
-app.listen(3001, () => console.log('Server listening on port 3000'))
+app.listen(3001, () => console.log('Server listening on port 3001'))

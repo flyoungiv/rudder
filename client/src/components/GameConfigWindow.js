@@ -1,42 +1,66 @@
-import React, { useState, useEffect } from "react";
-import { Segment, Button, Grid, Header, Icon, Image, Checkbox, Input, Divider } from "semantic-ui-react";
+import React, { useState, useEffect, useRef } from "react"
+import { Segment, Button, Grid, Header, Icon, Image, Checkbox, Input, Divider } from "semantic-ui-react"
+import saveCoverArt from '../utilities/save-cover-art'
+import updateGame from '../utilities/update-game'
 
-const { ipcRenderer } = window.require('electron');
-//import { ipcRenderer, platform } from 'electron';
+const { ipcRenderer, remote } = window.require('electron')
 //import saveCoverArt from '../utilities/saveCoverArt';
 //import refreshGameConfigWindow from '../utilities/refreshGameConfigWindow';
 
-//const img  './assets/img/clr.jpg';
+const deleteGame = (gameID, textConfirmation) => {
+  console.log(`trying to delete game ${gameID}`)
+  if (textConfirmation.toUpperCase() !== 'DELETE') {
+    return
+  }
+  else {
+    return fetch(`http://localhost:3001/games/${gameID}`, {
+      method: 'DELETE',
+      headers: { 'Content-Type': 'application/json' },
+      body: null
+    })
+      .then(() => { 
+        ipcRenderer.sendSync('update-game-library', 'a game has been deleted')
+        remote.getCurrentWindow().close() 
+      })
+    //.then(response => console.log(response.json())) // parses JSON response into native Javascript objects 
+  }
+}
 
-const deleteGame = gameID => {
-  // Default options are marked with *
-  return fetch(`http://localhost:3001/games/${gameID}`, {
-    method: 'DELETE',
-    mode: 'cors', // no-cors, cors, *same-origin
-    cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
-    //credentials: 'same-origin', // include, *same-origin, omit
-    headers: {
-      'Content-Type': 'application/json',
-      // 'Content-Type': 'application/x-www-form-urlencoded',
-    },
-    redirect: 'follow', // manual, *follow, error
-    referrer: 'no-referrer', // no-referrer, *client
-    body: null, // body data type must match "Content-Type" header
-  })
-    .then(response => console.log(response.json())); // parses JSON response into native Javascript objects 
+const uppercaseStyle = {
+  textTransform: 'uppercase'
 }
 
 const GameConfigWindow = (props) => {
 
   const [game, setGame] = useState({ rudder_id: null, game_title: null, shortcut: '', cover_art: null })
   const gameID = props.match.params.id
+  const deleteEl = useRef(null)
 
   useEffect(() => {
+
     fetch(`http://localhost:3001/games/${gameID}`)
       .then(response => response.json())
       .then(data => setGame({ rudder_id: data.rudder_id, game_title: data.game_title, shortcut: data.shortcut, cover_art: data.cover_art }))
       .catch(() => console.log(`Didn't find a game with that ID`))
-  })
+
+    //listener for choosing cover art via system dialog
+    ipcRenderer.on('selected-cover-art', (event, path) => {
+      console.log('created new selected-cover-art listener')
+      saveCoverArt.save(path[0], gameID)
+      ipcRenderer.sendSync('update-game-library', 'message sent from game config window')
+    })
+
+    ipcRenderer.on('selected-executable', (event, path) => {
+      console.log('created new selected-executable listener')
+      updateGame(gameID, { shortcut: game.shortcut })
+    })
+
+    //destroy the file dialog listener or we will keep re-creating it
+    // return () => {
+    //   console.log('got rid of all existing selected-directory listeners')
+    //   ipcRenderer.removeAllListeners('selected-directory')
+    // }
+  }, [gameID])
 
   return (
     <Segment>
@@ -56,7 +80,7 @@ const GameConfigWindow = (props) => {
               <Image
                 size="small"
                 //src={`./assets/img/cover_art/${game.cover_art}`}
-                src={`${process.env.PUBLIC_URL}/img/cover_art/${game.game_title}.jpg`}
+                src={`${process.env.PUBLIC_URL}/img/cover_art/${game.rudder_id}.png`}
               />
             </Grid.Column>
             <Grid.Column textAlign="right">
@@ -64,7 +88,7 @@ const GameConfigWindow = (props) => {
                 icon
                 labelPosition='left'
                 //onClick={() => console.log('click')}
-                onClick={() => ipcRenderer.send('open-file-dialog')}>
+                onClick={() => ipcRenderer.send('find-art-dialog')}>
 
 
                 <Icon name='folder outline' />
@@ -99,10 +123,11 @@ const GameConfigWindow = (props) => {
                             the game from your computer.</p>
 
         <Input placeholder='DELETE' action>
-          <input />
+          <input ref={deleteEl} style={uppercaseStyle} />
           <Button
             icon
-            onClick={() => deleteGame(game.rudder_id)}
+            //onClick={() => deleteEl.current.value === 'DELETE' ? console.log('DELETE') : console.log('not DELETE')}
+            onClick={() => deleteGame(game.rudder_id, deleteEl.current.value)}
           >
             <Icon name='trash alternate outline' color='red'></Icon>
           </Button>

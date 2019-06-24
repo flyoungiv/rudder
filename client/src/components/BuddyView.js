@@ -1,18 +1,9 @@
 import React from 'react'
-import SearchBar from './SearchBar';
-import GameList from './GameList';
-//import { games } from '../data/library.json';
+import SearchBar from './SearchBar'
+import GameList from './GameList'
+import getAllGames from '../utilities/get-all-games'
 
-// const library = require('../data/library.json');
-// const gameList = library.games;
-// const BuddyView = () => (
-//   <div>
-//       <SearchBar />
-//       <GameList />
-//   </div>
-// );
-// filter(game => game.game_title.indexOf('Chopper') >= 0)
-
+const { ipcRenderer } = window.require('electron')
 
 class BuddyView extends React.Component {
 
@@ -23,21 +14,22 @@ class BuddyView extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3001/games/')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ gameList: data })
-      })
+    getAllGames().then(data => this.setState({ gameList: data }))
+
+    ipcRenderer.on('updated-game-library', (event, args) => {
+      console.log('updating the game list')
+      getAllGames().then(data => this.setState({ gameList: data }))
+    })
     //.then(data => console.log(data))
   }
 
   handleKeyPress(event) {
     const queryString = event.target.value.toUpperCase();
     this.setState(
-      { 
+      {
         //gameList: games.filter(game => game.game_title.toUpperCase().includes(queryString)),
         query: queryString,
-       }
+      }
     );
   }
 

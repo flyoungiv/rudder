@@ -51,12 +51,27 @@ app.on('activate', function () {
 // code. You can also put them in separate files and require them here.
 const {ipcMain, dialog} = require('electron')
 
-ipcMain.on('open-file-dialog', (event) => {
+ipcMain.on('find-art-dialog', (event) => {
   dialog.showOpenDialog({
     properties: ['openFile']
   }, (files) => {
     if (files) {
-      event.sender.send('selected-directory', files)
+      event.sender.send('selected-cover-art', files)
     }
   })
+})
+
+ipcMain.on('find-executable-dialog', (event) => {
+  dialog.showOpenDialog({
+    properties: ['openFile']
+  }, (files) => {
+    if (files) {
+      event.sender.send('selected-executable', files)
+    }
+  })
+})
+
+ipcMain.on('update-game-library', (event, args) => {
+  console.log(args)
+  mainWindow.webContents.send('updated-game-library', args)
 })
