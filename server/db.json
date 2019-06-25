@@ -113,6 +113,26 @@
       "game_title": "Bioshock Infinite",
       "shortcut": "D:\\Games\\Steam\\steamapps\\common\\BioShock Infinite\\Binaries\\Win32\\BioShockInfinite.exe",
       "cover_art": "2379677-bioshockinfinite_boxart.jpg"
+    },
+    {
+      "rudder_id": "mIYuJVQdr",
+      "game_title": "Rollercoaster Tycoon"
+    },
+    {
+      "rudder_id": "12zeMPunJ",
+      "game_title": "Yooka-Laylee",
+      "shortcut": "D:\\Games\\Steam\\steamapps\\common\\YookaLaylee\\YookaLaylee64",
+      "cover_art": "/Updated/Cover/Art.jpg"
+    },
+    {
+      "rudder_id": "DuiXpA4KZ",
+      "game_title": "Steam Game",
+      "shortcut": "steam://rungameid/360830"
+    },
+    {
+      "rudder_id": "7cn0Or1ZA",
+      "game_title": "Steam Game",
+      "shortcut": "steam://rungameid/360830"
     }
   ],
   "settings": {}

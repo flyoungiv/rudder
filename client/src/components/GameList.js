@@ -1,6 +1,7 @@
 import React from 'react';
 import { List, Segment } from 'semantic-ui-react';
 import GameListEntry from './GameListEntry';
+import AddGameModal from './AddGameModal'
 
 const GameList = (props) => {
     const { games, query } = props;
@@ -18,6 +19,7 @@ const GameList = (props) => {
             </List.Item>
         );
     return (
+        <>
         <Segment id="game-list">
             <List
                 relaxed
@@ -28,6 +30,8 @@ const GameList = (props) => {
                 {gameListEntries}
             </List>
         </Segment>
+        <AddGameModal />
+        </>
     )
 };
 

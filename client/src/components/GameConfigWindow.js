@@ -19,7 +19,7 @@ const deleteGame = (gameID, textConfirmation) => {
       body: null
     })
       .then(() => { 
-        ipcRenderer.sendSync('update-game-library', 'a game has been deleted')
+        ipcRenderer.send('update-game-library', 'a game has been deleted')
         remote.getCurrentWindow().close() 
       })
     //.then(response => console.log(response.json())) // parses JSON response into native Javascript objects 

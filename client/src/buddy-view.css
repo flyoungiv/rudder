@@ -8,6 +8,14 @@
   transition: all 1s ease;
 }
 
+#add-game-button {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: 0px 0px 6px 0px rgba(34,36,38,.85);
+}
+
 /*semantic-ui overrides*/
 .ui.menu.fixed .item {
   width: 100%;
@@ -15,4 +23,13 @@
 
 #game-list {
   padding-top: 39px;
+  margin-bottom: 36px;
+}
+
+.ui.attached.bottom.button {
+  border-radius: 0;
+}
+
+.ui.segment {
+  margin-bottom: 0;
 }
