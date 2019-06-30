@@ -112,7 +112,7 @@
       "rudder_id": "gl7L1V7PVWB",
       "game_title": "Bioshock Infinite",
       "shortcut": "D:\\Games\\Steam\\steamapps\\common\\BioShock Infinite\\Binaries\\Win32\\BioShockInfinite.exe",
-      "cover_art": "2379677-bioshockinfinite_boxart.jpg"
+      "cover_art": "gl7L1V7PVWB.jpg"
     },
     {
       "rudder_id": "mIYuJVQdr",
@@ -125,14 +125,25 @@
       "cover_art": "/Updated/Cover/Art.jpg"
     },
     {
-      "rudder_id": "DuiXpA4KZ",
+      "rudder_id": "7cn0Or1ZA",
       "game_title": "Steam Game",
       "shortcut": "steam://rungameid/360830"
     },
     {
-      "rudder_id": "7cn0Or1ZA",
-      "game_title": "Steam Game",
-      "shortcut": "steam://rungameid/360830"
+      "rudder_id": "6m_6NxYMO",
+      "game_title": "Tomb Raider",
+      "shortcut": "C:/Path/to/Game.exe"
+    },
+    {
+      "rudder_id": "SGX9vj66x",
+      "game_title": "Path of Exile",
+      "shortcut": "C:\\WINDOWS\\system32\\mspaint.exe",
+      "cover_art": "SGX9vj66x.jpg"
+    },
+    {
+      "rudder_id": "mPXtc-iNd",
+      "game_title": "Dota 2",
+      "cover_art": "mPXtc-iNd.png"
     }
   ],
   "settings": {}

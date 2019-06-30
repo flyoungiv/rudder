@@ -76,10 +76,11 @@ app.post('/games', (req, res) => {
 //UPDATE
 //====================================
 
+//udate a game's attributes
 app.put('/games/:id', (req, res) => {
 
   if (!req.body.title && !req.body.shortcut && !req.body.cover_art) {
-    
+
     const message = {
       error: 'PUT requests should probably include at least one field you want to update',
       title: 'Updated Title',
@@ -104,6 +105,35 @@ app.put('/games/:id', (req, res) => {
       .write()
     res.status(200).json(game)
   }
+})
+
+//update cover art
+app.get('/artwork/:id', (req, res) => {
+
+  const rudderID = req.params.id
+  const gameTitle =
+    db.get('games')
+      .find({ rudder_id: req.params.id })
+      .value().game_title
+
+  const getCoverArt = require('./helpers/get-cover-art')
+  const saveCoverArt = require('./helpers/save-cover-art')
+
+  console.log('attempting to retrieve cover art', rudderID, gameTitle)
+
+  const saveArtFromWeb = async (rudderID, gameTitle) => {
+    const coverArtURL = await getCoverArt.getCoverArtURL(gameTitle)
+    const localFileName = await saveCoverArt.save(coverArtURL, rudderID)
+
+    db.get('games')
+      .find({ rudder_id: rudderID })
+      .assign({cover_art: localFileName})
+      .write()
+
+    res.status(200).json({ rudder_id: rudderID, cover_art: localFileName })
+  }
+
+  saveArtFromWeb(rudderID, gameTitle)
 })
 
 //====================================

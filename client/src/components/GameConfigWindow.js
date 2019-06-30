@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from "react"
-import { Segment, Button, Grid, Header, Icon, Image, Checkbox, Input, Divider } from "semantic-ui-react"
+import { Segment, Button, Grid, Header, Icon, Image, Checkbox, Input, Divider, Loader } from "semantic-ui-react"
 import saveCoverArt from '../utilities/save-cover-art'
 import updateGame from '../utilities/update-game'
 
@@ -18,9 +18,9 @@ const deleteGame = (gameID, textConfirmation) => {
       headers: { 'Content-Type': 'application/json' },
       body: null
     })
-      .then(() => { 
+      .then(() => {
         ipcRenderer.send('update-game-library', 'a game has been deleted')
-        remote.getCurrentWindow().close() 
+        remote.getCurrentWindow().close()
       })
     //.then(response => console.log(response.json())) // parses JSON response into native Javascript objects 
   }
@@ -33,10 +33,13 @@ const uppercaseStyle = {
 const GameConfigWindow = (props) => {
 
   const [game, setGame] = useState({ rudder_id: null, game_title: null, shortcut: '', cover_art: null })
+  const [loading, setLoading] = useState(false)
   const gameID = props.match.params.id
   const deleteEl = useRef(null)
 
   useEffect(() => {
+
+    console.log('triggered useEffect')
 
     fetch(`http://localhost:3001/games/${gameID}`)
       .then(response => response.json())
@@ -60,7 +63,24 @@ const GameConfigWindow = (props) => {
     //   console.log('got rid of all existing selected-directory listeners')
     //   ipcRenderer.removeAllListeners('selected-directory')
     // }
-  }, [gameID])
+  }, [gameID, loading])
+
+  const retrieveCoverArt = (gameID) => {
+    console.log('setloading true')
+    setLoading(true)
+    fetch(`${process.env.REACT_APP_SERVER_URL}/artwork/${gameID}`)
+      .then(response => console.log(response.json()))
+      .then(()=>{setLoading(false)
+      console.log('setloading true') })
+      //.then(window.location.reload(true))
+      .catch(() => console.log(`Unable to retrieve cover art`))
+  }
+
+  const loaderTest = () => {
+    setLoading(true)
+    setTimeout(function () { setLoading(false) }, 2000)
+    
+  }
 
   return (
     <Segment>
@@ -77,10 +97,11 @@ const GameConfigWindow = (props) => {
         <Grid columns={2}>
           <Grid.Row verticalAlign="middle">
             <Grid.Column textAlign="left">
+              {loading && <Loader active inverted size='massive'>Loading</Loader>}
               <Image
-                size="small"
+                //size="small"
                 //src={`./assets/img/cover_art/${game.cover_art}`}
-                src={`${process.env.PUBLIC_URL}/img/cover_art/${game.rudder_id}.png`}
+                src={`${process.env.PUBLIC_URL}/img/cover_art/${game.cover_art}`}
               />
             </Grid.Column>
             <Grid.Column textAlign="right">
@@ -93,12 +114,12 @@ const GameConfigWindow = (props) => {
 
                 <Icon name='folder outline' />
                 Browse Computer
-                                </Button>
+              </Button>
               <Divider hidden />
-              <Button primary icon labelPosition='left'>
+              <Button onClick={() => retrieveCoverArt(game.rudder_id)} primary icon labelPosition='left'>
                 <Icon name='cloud download' />
                 Get Automatically
-                                </Button>
+              </Button>
             </Grid.Column>
           </Grid.Row>
         </Grid>

@@ -1,0 +1,57 @@
+"AppState"
+{
+	"appid"		"377160"
+	"Universe"		"1"
+	"name"		"Fallout 4"
+	"StateFlags"		"4"
+	"installdir"		"Fallout 4"
+	"LastUpdated"		"1561440966"
+	"UpdateResult"		"0"
+	"SizeOnDisk"		"27734077709"
+	"buildid"		"3908801"
+	"LastOwner"		"76561198004806563"
+	"BytesToDownload"		"47073264"
+	"BytesDownloaded"		"47073264"
+	"AutoUpdateBehavior"		"0"
+	"AllowOtherDownloadsWhileRunning"		"0"
+	"ScheduledAutoUpdate"		"0"
+	"InstalledDepots"
+	{
+		"377161"
+		{
+			"manifest"		"7497069378349273908"
+		}
+		"377162"
+		{
+			"manifest"		"5753331920310626375"
+		}
+		"377163"
+		{
+			"manifest"		"4209946825939071876"
+		}
+		"377164"
+		{
+			"manifest"		"2178106366609958945"
+		}
+	}
+	"MountedDepots"
+	{
+		"377161"		"7497069378349273908"
+		"377162"		"5753331920310626375"
+		"377163"		"4209946825939071876"
+		"377164"		"2178106366609958945"
+	}
+	"InstallScripts"
+	{
+		"377161"		"installscript.vdf"
+	}
+	"SharedDepots"
+	{
+		"228984"		"228980"
+		"228990"		"228980"
+	}
+	"UserConfig"
+	{
+		"language"		"english"
+	}
+}

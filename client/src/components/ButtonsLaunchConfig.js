@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'semantic-ui-react';
-import startChildApp from '../utilities/startChildApp';
-import openSettingsWindow from '../utilities/openSettingsWindow';
+import startChildApp from '../utilities/start-child-app';
+import openSettingsWindow from '../utilities/open-settings-window';
 
 class LaunchGameButton extends React.Component {
     render() {

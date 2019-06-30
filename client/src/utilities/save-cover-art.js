@@ -40,7 +40,6 @@ const saveCoverArt = {
             const newPath = coverArtFolder + newFileName
             jetpack.copy(path, newPath, {overwrite: true});
             console.log(`copied ${path} to ${newPath}`);
-            console.log('still need to update the rudder DB')
             
             //this line is kind of unnecessary because we aren't currently using the cover_art property to get the cover_art
             updateGame(gameID, {cover_art: newPath})
