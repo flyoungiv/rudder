@@ -144,6 +144,324 @@
       "rudder_id": "mPXtc-iNd",
       "game_title": "Dota 2",
       "cover_art": "mPXtc-iNd.png"
+    },
+    {
+      "rudder_id": "azXK12oRO",
+      "game_title": "Terraria",
+      "shortcut": "steam://rungameid/105600",
+      "platform": "steam",
+      "steam_id": "105600"
+    },
+    {
+      "rudder_id": "5kes3ZJ4XM",
+      "game_title": "Half-Life: Blue Shift",
+      "shortcut": "steam://rungameid/130",
+      "platform": "steam",
+      "steam_id": "130"
+    },
+    {
+      "rudder_id": "R8QT-vUyn8",
+      "game_title": "Team Fortress Classic",
+      "shortcut": "steam://rungameid/20",
+      "platform": "steam",
+      "steam_id": "20"
+    },
+    {
+      "rudder_id": "mZwFveTpzS",
+      "game_title": "Torchlight II",
+      "shortcut": "steam://rungameid/200710",
+      "platform": "steam",
+      "steam_id": "200710"
+    },
+    {
+      "rudder_id": "Wsj073Ghcm",
+      "game_title": "STAR WARS™ Knights of the Old Republic™ II: The Sith Lords™",
+      "shortcut": "steam://rungameid/208580",
+      "platform": "steam",
+      "steam_id": "208580"
+    },
+    {
+      "rudder_id": "q3KkngWCGA",
+      "game_title": "Half-Life 2",
+      "shortcut": "steam://rungameid/220",
+      "platform": "steam",
+      "steam_id": "220"
+    },
+    {
+      "rudder_id": "v7Rvq0q4Cs",
+      "game_title": "Dying Light",
+      "shortcut": "steam://rungameid/239140",
+      "platform": "steam",
+      "steam_id": "239140"
+    },
+    {
+      "rudder_id": "899zSRf1yF",
+      "game_title": "7 Days to Die",
+      "shortcut": "steam://rungameid/251570",
+      "platform": "steam",
+      "steam_id": "251570"
+    },
+    {
+      "rudder_id": "56JivPrgGA",
+      "game_title": "Rocket League",
+      "shortcut": "steam://rungameid/252950",
+      "platform": "steam",
+      "steam_id": "252950"
+    },
+    {
+      "rudder_id": "8_xiJvJx7M",
+      "game_title": "Bedlam",
+      "shortcut": "steam://rungameid/261490",
+      "platform": "steam",
+      "steam_id": "261490"
+    },
+    {
+      "rudder_id": "cwJ3KpOO1L",
+      "game_title": "Ori and the Blind Forest",
+      "shortcut": "steam://rungameid/261570",
+      "platform": "steam",
+      "steam_id": "261570"
+    },
+    {
+      "rudder_id": "WXKIeR52Cm",
+      "game_title": "Blockstorm",
+      "shortcut": "steam://rungameid/263060",
+      "platform": "steam",
+      "steam_id": "263060"
+    },
+    {
+      "rudder_id": "1XcX_TtiU_",
+      "game_title": "Grand Theft Auto V",
+      "shortcut": "steam://rungameid/271590",
+      "platform": "steam",
+      "steam_id": "271590"
+    },
+    {
+      "rudder_id": "YCfMcYIJBz",
+      "game_title": "Half-Life: Source",
+      "shortcut": "steam://rungameid/280",
+      "platform": "steam",
+      "steam_id": "280"
+    },
+    {
+      "rudder_id": "PhZgbZQOWd",
+      "game_title": "Tabletop Simulator",
+      "shortcut": "steam://rungameid/286160",
+      "platform": "steam",
+      "steam_id": "286160"
+    },
+    {
+      "rudder_id": "3wkKLjGbbb",
+      "game_title": "Call of Juarez",
+      "shortcut": "steam://rungameid/3020",
+      "platform": "steam",
+      "steam_id": "3020",
+      "cover_art": "3wkKLjGbbb.jpg"
+    },
+    {
+      "rudder_id": "Y93wpXXR8Wy",
+      "game_title": "Half-Life 2: Deathmatch",
+      "shortcut": "steam://rungameid/320",
+      "platform": "steam",
+      "steam_id": "320"
+    },
+    {
+      "rudder_id": "w2UC-R9KtGL",
+      "game_title": "STAR WARS™ Starfighter™",
+      "shortcut": "steam://rungameid/32350",
+      "platform": "steam",
+      "steam_id": "32350"
+    },
+    {
+      "rudder_id": "tlPwrXj-YAr",
+      "game_title": "STAR WARS™: Knights of the Old Republic™",
+      "shortcut": "steam://rungameid/32370",
+      "platform": "steam",
+      "steam_id": "32370"
+    },
+    {
+      "rudder_id": "UiD84zodXaN",
+      "game_title": "STAR WARS™ Jedi Knight: Dark Forces II",
+      "shortcut": "steam://rungameid/32380",
+      "platform": "steam",
+      "steam_id": "32380"
+    },
+    {
+      "rudder_id": "YIuyg8RViXH",
+      "game_title": "STAR WARS™ Jedi Knight: Mysteries of the Sith™",
+      "shortcut": "steam://rungameid/32390",
+      "platform": "steam",
+      "steam_id": "32390"
+    },
+    {
+      "rudder_id": "9jVyqFPEtRy",
+      "game_title": "STAR WARS™: Dark Forces",
+      "shortcut": "steam://rungameid/32400",
+      "platform": "steam",
+      "steam_id": "32400"
+    },
+    {
+      "rudder_id": "4zzrk306m9H",
+      "game_title": "STAR WARS™: The Clone Wars - Republic Heroes™",
+      "shortcut": "steam://rungameid/32420",
+      "platform": "steam",
+      "steam_id": "32420"
+    },
+    {
+      "rudder_id": "k8LsnuWEXDZ",
+      "game_title": "STAR WARS™: The Force Unleashed™ Ultimate Sith Edition",
+      "shortcut": "steam://rungameid/32430",
+      "platform": "steam",
+      "steam_id": "32430"
+    },
+    {
+      "rudder_id": "GbelcRf7PcC",
+      "game_title": "STAR WARS™ Empire at War: Gold Pack",
+      "shortcut": "steam://rungameid/32470",
+      "platform": "steam",
+      "steam_id": "32470"
+    },
+    {
+      "rudder_id": "oq-FrQW41Fc",
+      "game_title": "STAR WARS™: The Force Unleashed™ II",
+      "shortcut": "steam://rungameid/32500",
+      "platform": "steam",
+      "steam_id": "32500"
+    },
+    {
+      "rudder_id": "rRRTszRX7Cd",
+      "game_title": "Half-Life 2: Lost Coast",
+      "shortcut": "steam://rungameid/340",
+      "platform": "steam",
+      "steam_id": "340"
+    },
+    {
+      "rudder_id": "4bB_t7ZKrtZ",
+      "game_title": "ARK: Survival Evolved",
+      "shortcut": "steam://rungameid/346110",
+      "platform": "steam",
+      "steam_id": "346110"
+    },
+    {
+      "rudder_id": "91LGjWVzImv",
+      "game_title": "Half-Life Deathmatch: Source",
+      "shortcut": "steam://rungameid/360",
+      "platform": "steam",
+      "steam_id": "360"
+    },
+    {
+      "rudder_id": "3nghkqW6Eb7",
+      "game_title": "Yooka-Laylee",
+      "shortcut": "steam://rungameid/360830",
+      "platform": "steam",
+      "steam_id": "360830"
+    },
+    {
+      "rudder_id": "hiN3ciEHAzZ",
+      "game_title": "Fallout 4",
+      "shortcut": "steam://rungameid/377160",
+      "platform": "steam",
+      "steam_id": "377160"
+    },
+    {
+      "rudder_id": "7ERGKfJQ7xK",
+      "game_title": "Half-Life 2: Episode One",
+      "shortcut": "steam://rungameid/380",
+      "platform": "steam",
+      "steam_id": "380"
+    },
+    {
+      "rudder_id": "ct5NSjKQIWR",
+      "game_title": "Portal",
+      "shortcut": "steam://rungameid/400",
+      "platform": "steam",
+      "steam_id": "400"
+    },
+    {
+      "rudder_id": "rzP5oOW0q7n",
+      "game_title": "Garry's Mod",
+      "shortcut": "steam://rungameid/4000",
+      "platform": "steam",
+      "steam_id": "4000"
+    },
+    {
+      "rudder_id": "-2NZxvD7_D0",
+      "game_title": "Super Meat Boy",
+      "shortcut": "steam://rungameid/40800",
+      "platform": "steam",
+      "steam_id": "40800",
+      "cover_art": "-2NZxvD7_D0.jpg"
+    },
+    {
+      "rudder_id": "lTWf90OyoiP",
+      "game_title": "Half-Life 2: Episode Two",
+      "shortcut": "steam://rungameid/420",
+      "platform": "steam",
+      "steam_id": "420"
+    },
+    {
+      "rudder_id": "9FEGOwseia3",
+      "game_title": "Half-Life: Opposing Force",
+      "shortcut": "steam://rungameid/50",
+      "platform": "steam",
+      "steam_id": "50",
+      "cover_art": "9FEGOwseia3.jpg"
+    },
+    {
+      "rudder_id": "z2UGsuuo1j6",
+      "game_title": "STAR WARS™ Republic Commando",
+      "shortcut": "steam://rungameid/6000",
+      "platform": "steam",
+      "steam_id": "6000"
+    },
+    {
+      "rudder_id": "ze17k9FFtuj",
+      "game_title": "STAR WARS™ Jedi Knight: Jedi Academy™",
+      "shortcut": "steam://rungameid/6020",
+      "platform": "steam",
+      "steam_id": "6020"
+    },
+    {
+      "rudder_id": "O1LcnmrpL6H",
+      "game_title": "STAR WARS™ Jedi Knight II: Jedi Outcast™",
+      "shortcut": "steam://rungameid/6030",
+      "platform": "steam",
+      "steam_id": "6030"
+    },
+    {
+      "rudder_id": "LK_NQOvvvc-",
+      "game_title": "Star Wars: Battlefront 2 (Classic, 2005)",
+      "shortcut": "steam://rungameid/6060",
+      "platform": "steam",
+      "steam_id": "6060"
+    },
+    {
+      "rudder_id": "lUCID8VYHKp",
+      "game_title": "Portal 2",
+      "shortcut": "steam://rungameid/620",
+      "platform": "steam",
+      "steam_id": "620"
+    },
+    {
+      "rudder_id": "o0k1qcH6byG",
+      "game_title": "Half-Life",
+      "shortcut": "steam://rungameid/70",
+      "platform": "steam",
+      "steam_id": "70"
+    },
+    {
+      "rudder_id": "0zgHChI17x8",
+      "game_title": "Counter-Strike: Global Offensive",
+      "shortcut": "steam://rungameid/730",
+      "platform": "steam",
+      "steam_id": "730"
+    },
+    {
+      "rudder_id": "QP_1hfDZMZB",
+      "game_title": "BioShock Infinite",
+      "shortcut": "steam://rungameid/8870",
+      "platform": "steam",
+      "steam_id": "8870"
     }
   ],
   "settings": {}

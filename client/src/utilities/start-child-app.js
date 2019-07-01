@@ -9,11 +9,16 @@ const startChildApp = path => {
     //     console.log(err)
     //     console.log(data.toString());
     // }
-    exec(`start steam://rungameid/286160`, parameters, function (err, data) {
+    // exec(`start steam://rungameid/286160`, parameters, function (err, data) {
+    
+    //format steam paths differently
+    if (path.startsWith('steam')) path = `start ${path}`
+    
+    exec(path, parameters, function (err, data) {
         console.log(err)
         console.log(data.toString());
     }
-    
+
     );
 };
 

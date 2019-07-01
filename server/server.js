@@ -127,7 +127,7 @@ app.get('/artwork/:id', (req, res) => {
 
     db.get('games')
       .find({ rudder_id: rudderID })
-      .assign({cover_art: localFileName})
+      .assign({ cover_art: localFileName })
       .write()
 
     res.status(200).json({ rudder_id: rudderID, cover_art: localFileName })
@@ -159,8 +159,54 @@ app.delete('/games/:id', (req, res) => {
   res.status(200).json(game)
 })
 
+//====================================
+// CRAWLER
+//====================================
+app.post('/crawler', (req, res) => {
 
-//====================================
-//Start App
-//====================================
-app.listen(3001, () => console.log('Server listening on port 3001'))
+  if (req.body.platform === 'steam' && req.body.path) {
+
+    //pass this in with through the route
+    const steamDir = req.body.path
+
+    const SteamCrawler = require('./crawlers/SteamCrawler')
+    const crawler = new SteamCrawler()
+
+    const games = crawler.crawl(steamDir)
+
+    games.forEach(game => {
+
+      if (db.get('games').find({ steam_id: game.steamAppID }).value()) return //if game exists already, return and check the next game
+
+      const newGame = {
+        rudder_id: shortid.generate(),
+        game_title: game.gameTitle,
+        shortcut: game.command,
+        platform: 'steam',
+        steam_id: game.steamAppID
+      }
+
+      db.get('games')
+        .push(newGame)
+        .write()
+
+    })
+
+    res.status(201).json(db.get('games').value()) //finish by returning full library
+  
+  } else {
+
+    const message = {
+      error: 'must include a platform and a path where games can be found',
+      platform: 'string (e.g. steam)',
+      path: 'C:/Path/to/library/'
+    }
+
+    res.status(404).json(message)
+  }
+})
+
+  //====================================
+  //Start App
+  //====================================
+  app.listen(3001, () => console.log('Server listening on port 3001'))

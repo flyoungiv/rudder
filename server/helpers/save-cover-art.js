@@ -4,7 +4,7 @@ const request = require('request')
 
 const coverArtFolder = `../client/public/img/cover_art/`
 
-module.exports =  saveCoverArt = {
+module.exports = saveCoverArt = {
   save(path, gameID) {
     const fileExtension = path.split('.').pop()
     //console.log('ext ', fileExtension)
